@@ -104,7 +104,7 @@
 <body class="bg-surface text-on-surface flex min-h-screen selection:bg-primary-container selection:text-on-primary-container">
 <!-- SideNavBar -->
 <!-- SideNavBar -->
-<nav class="bg-slate-50 dark:bg-slate-900 text-teal-800 dark:text-teal-400 font-sans tracking-tight text-sm font-medium h-screen w-64 fixed left-0 top-0 overflow-y-auto shadow-[8px_0_24px_rgba(0,0,0,0.04)] z-50 flex flex-col p-6 gap-2 border-r border-slate-100 dark:border-slate-800 hidden md:flex">
+<nav id="side-nav" class="bg-slate-50 dark:bg-slate-900 text-teal-800 dark:text-teal-400 font-sans tracking-tight text-sm font-medium h-screen w-64 fixed left-0 top-0 overflow-y-auto shadow-[8px_0_24px_rgba(0,0,0,0.04)] z-[60] flex flex-col p-6 gap-2 border-r border-slate-100 dark:border-slate-800 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out">
     <!-- Brand -->
     <div class="flex items-center gap-3 mb-8 px-2">
         <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary-container flex items-center justify-center text-on-primary shrink-0 ambient-shadow">
@@ -167,13 +167,19 @@
             Logout
         </a>
     </div>
+    </div>
 </nav>
+<!-- Mobile Sidebar Overlay -->
+<div id="side-nav-overlay" class="fixed inset-0 bg-black/50 z-[55] hidden transition-opacity duration-300"></div>
 <!-- Main Content Area Wrapper -->
 <div class="flex-1 flex flex-col md:pl-64 min-w-0">
 <!-- TopAppBar -->
 <!-- TopAppBar -->
-<header class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md text-teal-700 dark:text-teal-400 font-sans text-sm tracking-wide uppercase font-semibold sticky top-0 z-40 w-full flex justify-between items-center h-16 px-8 scale-95 active:scale-90 transition-transform">
+<header class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md text-teal-700 dark:text-teal-400 font-sans text-sm tracking-wide uppercase font-semibold sticky top-0 z-40 w-full flex justify-between items-center h-16 px-8 border-b border-surface-container/50 transition-all duration-300 flex-shrink-0">
     <div class="flex items-center gap-4">
+        <button id="menu-toggle" class="md:hidden text-slate-500 hover:text-teal-600 p-2 rounded-full hover:bg-slate-100 transition-colors">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
         <span class="text-xl font-black text-slate-900 dark:text-white normal-case tracking-normal">Impact Portal</span>
     </div>
     <div class="flex items-center gap-4">
@@ -193,6 +199,10 @@
 <!-- Canvas Area -->
 <main class="flex-1 p-6 md:p-10 pb-24 overflow-x-hidden">
 <!-- Header Section -->
+<a href="../education_management_hub/code.html" class="flex items-center gap-2 text-slate-500 hover:text-teal-600 transition-colors mb-6 group w-fit">
+    <span class="material-symbols-outlined text-sm group-hover:-translate-x-1 transition-transform tracking-normal">arrow_back</span>
+    <span class="text-[10px] font-bold uppercase tracking-widest">Back to Education Hub</span>
+</a>
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
 <div>
 <h2 class="text-[2.75rem] font-headline font-black text-on-surface tracking-[-0.02em] leading-none mb-3">Fellows Progress Tracking</h2>
@@ -201,25 +211,31 @@
                     </p>
 </div>
 <!-- Action Controls -->
-<div class="flex items-center gap-3 shrink-0">
-<div class="bg-surface-container-low rounded-full p-1 flex border border-surface-container-highest">
-<button class="px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface text-sm font-medium shadow-sm flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px]">grid_view</span>
-                            Grid
-                        </button>
-<button class="px-4 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface text-sm font-medium flex items-center gap-2 transition-colors">
-<span class="material-symbols-outlined text-[18px]">view_list</span>
-                            List
-                        </button>
-</div>
-<button class="bg-surface-container hover:bg-surface-container-high text-on-surface px-5 py-2.5 rounded-full text-sm font-semibold transition-colors flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px]" data-icon="filter_list">filter_list</span>
-                        Filters
-                    </button>
-<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-[0_4px_12px_rgba(0,104,87,0.2)] transition-all flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px]" data-icon="download">download</span>
-                        Export Report
-                    </button>
+<div class="flex flex-wrap items-center gap-4 w-full xl:w-auto">
+    <div class="relative w-full sm:w-64">
+        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">search</span>
+        <input class="w-full pl-10 pr-4 py-2 bg-surface-container rounded-full border-none focus:ring-2 focus:ring-primary text-sm placeholder-on-surface-variant/70 transition-shadow" placeholder="Search fellows..." type="text"/>
+    </div>
+    <div class="flex flex-wrap items-center gap-3">
+        <div class="bg-surface-container-low rounded-full p-1 flex border border-surface-container-highest">
+            <button class="px-4 py-1.5 rounded-full bg-surface-container-lowest text-on-surface text-sm font-medium shadow-sm flex items-center gap-2">
+                <span class="material-symbols-outlined text-[18px]">grid_view</span>
+                Grid
+            </button>
+            <button class="px-4 py-1.5 rounded-full text-on-surface-variant hover:text-on-surface text-sm font-medium flex items-center gap-2 transition-colors">
+                <span class="material-symbols-outlined text-[18px]">view_list</span>
+                List
+            </button>
+        </div>
+        <button class="bg-primary text-white px-5 py-2.5 rounded-full text-sm font-semibold transition-colors flex items-center gap-2 shadow-lg shadow-primary/20 whitespace-nowrap">
+            <span class="material-symbols-outlined text-[18px]">add</span>
+            Add Fellow
+        </button>
+        <button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-[0_4px_12px_rgba(0,104,87,0.2)] transition-all flex items-center gap-2 whitespace-nowrap">
+            <span class="material-symbols-outlined text-[18px]" data-icon="download">download</span>
+            Export Report
+        </button>
+    </div>
 </div>
 </div>
 <!-- Metrics Summary Cards -->
@@ -430,4 +446,18 @@
 </div>
 </main>
 </div>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const sideNav = document.getElementById('side-nav');
+        const sideNavOverlay = document.getElementById('side-nav-overlay');
+
+        function toggleMenu() {
+            sideNav.classList.toggle('-translate-x-full');
+            sideNavOverlay.classList.toggle('hidden');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        menuToggle?.addEventListener('click', toggleMenu);
+        sideNavOverlay?.addEventListener('click', toggleMenu);
+    </script>
 </body></html>

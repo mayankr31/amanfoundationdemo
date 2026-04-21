@@ -109,7 +109,7 @@
 <body class="bg-surface text-on-surface font-body min-h-screen flex">
 <!-- SideNavBar (Shared Component) -->
 <!-- SideNavBar -->
-<nav class="bg-slate-50 dark:bg-slate-900 text-teal-800 dark:text-teal-400 font-sans tracking-tight text-sm font-medium h-screen w-64 fixed left-0 top-0 overflow-y-auto shadow-[8px_0_24px_rgba(0,0,0,0.04)] z-50 flex flex-col p-6 gap-2 border-r border-slate-100 dark:border-slate-800 hidden md:flex">
+<nav id="side-nav" class="bg-slate-50 dark:bg-slate-900 text-teal-800 dark:text-teal-400 font-sans tracking-tight text-sm font-medium h-screen w-64 fixed left-0 top-0 overflow-y-auto shadow-[8px_0_24px_rgba(0,0,0,0.04)] z-[60] flex flex-col p-6 gap-2 border-r border-slate-100 dark:border-slate-800 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out">
     <!-- Brand -->
     <div class="flex items-center gap-3 mb-8 px-2">
         <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary-container flex items-center justify-center text-on-primary shrink-0 ambient-shadow">
@@ -172,13 +172,19 @@
             Logout
         </a>
     </div>
+    </div>
 </nav>
+<!-- Mobile Sidebar Overlay -->
+<div id="side-nav-overlay" class="fixed inset-0 bg-black/50 z-[55] hidden transition-opacity duration-300"></div>
 <!-- Main Content Canvas -->
 <div class="flex-1 ml-0 md:ml-64 flex flex-col min-h-screen relative">
 <!-- TopAppBar (Shared Component) -->
 <!-- TopAppBar -->
-<header class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md text-teal-700 dark:text-teal-400 font-sans text-sm tracking-wide uppercase font-semibold sticky top-0 z-40 w-full flex justify-between items-center h-16 px-8 scale-95 active:scale-90 transition-transform">
+<header class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md text-teal-700 dark:text-teal-400 font-sans text-sm tracking-wide uppercase font-semibold sticky top-0 z-40 w-full flex justify-between items-center h-16 px-8 border-b border-surface-container/50 transition-all duration-300 flex-shrink-0">
     <div class="flex items-center gap-4">
+        <button id="menu-toggle" class="md:hidden text-slate-500 hover:text-teal-600 p-2 rounded-full hover:bg-slate-100 transition-colors">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
         <span class="text-xl font-black text-slate-900 dark:text-white normal-case tracking-normal">Impact Portal</span>
     </div>
     <div class="flex items-center gap-4">
@@ -197,6 +203,10 @@
 </header>
 <!-- Canvas Body -->
 <main class="flex-1 p-12 bg-surface">
+<a href="../impact_dashboard_aman_foundation/code.html" class="flex items-center gap-2 text-slate-500 hover:text-teal-600 transition-colors mb-6 group w-fit">
+    <span class="material-symbols-outlined text-sm group-hover:-translate-x-1 transition-transform tracking-normal">arrow_back</span>
+    <span class="text-[10px] font-bold uppercase tracking-widest">Back to Dashboard</span>
+</a>
 <!-- Hero Section -->
 <div class="mb-16 max-w-4xl">
 <h2 class="text-display-md font-headline text-on-surface mb-6">Livelihood Management</h2>
@@ -207,7 +217,7 @@
 <!-- Bento Grid Content -->
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 <!-- Card 1: Goat Rearing -->
-<a class="block group bg-surface-container-lowest rounded-lg p-8 ambient-shadow hover:-translate-y-1 transition-transform duration-300 h-full flex flex-col justify-between" href="#">
+<a class="block group bg-surface-container-lowest rounded-lg p-8 ambient-shadow hover:-translate-y-1 transition-transform duration-300 h-full flex flex-col justify-between" href="../livelihood_goat_rearing_1/code.html">
 <div>
 <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center mb-6 text-primary">
 <span class="material-symbols-outlined" style="font-size: 24px;">pets</span>
@@ -223,7 +233,7 @@
 </div>
 </a>
 <!-- Card 2: Sugarcane Cultivation -->
-<a class="block group bg-surface-container-lowest rounded-lg p-8 ambient-shadow hover:-translate-y-1 transition-transform duration-300 h-full flex flex-col justify-between" href="#">
+<a class="block group bg-surface-container-lowest rounded-lg p-8 ambient-shadow hover:-translate-y-1 transition-transform duration-300 h-full flex flex-col justify-between" href="../livelihood_sugarcane_cultivation/code.html">
 <div>
 <div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center mb-6 text-primary">
 <span class="material-symbols-outlined" style="font-size: 24px;">agriculture</span>
@@ -239,7 +249,7 @@
 </div>
 </a>
 <!-- Card 3: Beneficiaries Master -->
-<a class="block group bg-primary rounded-lg p-8 ambient-shadow hover:-translate-y-1 transition-transform duration-300 h-full flex flex-col justify-between relative overflow-hidden" href="#">
+<a class="block group bg-primary rounded-lg p-8 ambient-shadow hover:-translate-y-1 transition-transform duration-300 h-full flex flex-col justify-between relative overflow-hidden" href="../beneficiary_master_profile/code.html">
 <div class="absolute -right-8 -top-8 w-32 h-32 bg-primary-container rounded-full opacity-50 blur-2xl"></div>
 <div class="relative z-10">
 <div class="w-12 h-12 rounded-full bg-primary-container flex items-center justify-center mb-6 text-on-primary">
@@ -268,5 +278,18 @@
 <a class="hover:text-emerald-600 transition-opacity duration-300" href="#">Impact Data Transparency</a>
 </div>
 </footer>
-</div>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const sideNav = document.getElementById('side-nav');
+        const sideNavOverlay = document.getElementById('side-nav-overlay');
+
+        function toggleMenu() {
+            sideNav.classList.toggle('-translate-x-full');
+            sideNavOverlay.classList.toggle('hidden');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        menuToggle?.addEventListener('click', toggleMenu);
+        sideNavOverlay?.addEventListener('click', toggleMenu);
+    </script>
 </body></html>

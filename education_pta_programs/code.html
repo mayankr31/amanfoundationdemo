@@ -88,7 +88,7 @@
 </head>
 <body class="bg-surface text-on-surface font-body antialiased flex h-screen overflow-hidden">
 <!-- SideNavBar -->
-<nav class="bg-slate-50 dark:bg-slate-900 text-teal-800 dark:text-teal-400 font-sans tracking-tight text-sm font-medium h-screen w-64 fixed left-0 top-0 overflow-y-auto shadow-[8px_0_24px_rgba(0,0,0,0.04)] z-50 flex flex-col p-6 gap-2 border-r border-slate-100 dark:border-slate-800 hidden md:flex">
+<nav id="side-nav" class="bg-slate-50 dark:bg-slate-900 text-teal-800 dark:text-teal-400 font-sans tracking-tight text-sm font-medium h-screen w-64 fixed left-0 top-0 overflow-y-auto shadow-[8px_0_24px_rgba(0,0,0,0.04)] z-[60] flex flex-col p-6 gap-2 border-r border-slate-100 dark:border-slate-800 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out">
     <!-- Brand -->
     <div class="flex items-center gap-3 mb-8 px-2">
         <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary-container flex items-center justify-center text-on-primary shrink-0 ambient-shadow">
@@ -151,13 +151,19 @@
             Logout
         </a>
     </div>
+    </div>
 </nav>
+<!-- Mobile Sidebar Overlay -->
+<div id="side-nav-overlay" class="fixed inset-0 bg-black/50 z-[55] hidden transition-opacity duration-300"></div>
 <!-- Main Content Area -->
 <main class="flex-1 ml-0 md:ml-64 flex flex-col h-screen overflow-hidden bg-surface relative">
 <!-- TopNavBar (Mobile only for Nav, but acts as header here for tools) -->
 <!-- TopAppBar -->
-<header class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md text-teal-700 dark:text-teal-400 font-sans text-sm tracking-wide uppercase font-semibold sticky top-0 z-40 w-full flex justify-between items-center h-16 px-8 scale-95 active:scale-90 transition-transform">
+<header class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md text-teal-700 dark:text-teal-400 font-sans text-sm tracking-wide uppercase font-semibold sticky top-0 z-40 w-full flex justify-between items-center h-16 px-8 border-b border-surface-container/50 transition-all duration-300 flex-shrink-0">
     <div class="flex items-center gap-4">
+        <button id="menu-toggle" class="md:hidden text-slate-500 hover:text-teal-600 p-2 rounded-full hover:bg-slate-100 transition-colors">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
         <span class="text-xl font-black text-slate-900 dark:text-white normal-case tracking-normal">Impact Portal</span>
     </div>
     <div class="flex items-center gap-4">
@@ -174,22 +180,28 @@
         </div>
     </div>
 </header>
-<!-- Canvas Header (Desktop) -->
-<div class="hidden md:flex justify-between items-end px-12 pt-12 pb-6 z-10 relative">
-<div>
-<h2 class="text-label-md text-on-surface-variant mb-2">Education Module</h2>
-<h1 class="text-display-md font-headline font-semibold text-on-background">PTA &amp; Programs</h1>
-</div>
-<div class="flex gap-3">
-<button class="bg-surface-container-lowest text-on-surface border border-outline-variant/30 px-6 py-2.5 rounded-full text-sm font-medium hover:bg-surface-container-low transition-colors ambient-shadow flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px]">calendar_month</span>
-                    Calendar View
-                </button>
-<button class="impact-gradient text-on-primary px-6 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-opacity shadow-[0_4px_12px_rgba(0,104,87,0.2)] flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px]">add</span>
-                    New Program
-                </button>
-</div>
+<!-- Canvas Header -->
+<div class="flex flex-col px-6 md:px-12 pt-8 md:pt-12 pb-2 z-10 relative">
+    <a href="../education_management_hub/code.html" class="flex items-center gap-2 text-slate-500 hover:text-teal-600 transition-colors mb-6 group w-fit">
+        <span class="material-symbols-outlined text-sm group-hover:-translate-x-1 transition-transform tracking-normal">arrow_back</span>
+        <span class="text-[10px] font-bold uppercase tracking-widest">Back to Education Hub</span>
+    </a>
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+        <div>
+            <h2 class="text-label-md text-on-surface-variant mb-2">Education Module</h2>
+            <h1 class="text-2xl md:text-display-md font-headline font-semibold text-on-background leading-tight">PTA &amp; Programs</h1>
+        </div>
+        <div class="flex flex-wrap gap-3">
+            <button class="flex-1 md:flex-none bg-surface-container-lowest text-on-surface border border-outline-variant/30 px-6 py-2.5 rounded-full text-sm font-medium hover:bg-surface-container-low transition-colors ambient-shadow flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                <span class="whitespace-nowrap">Calendar View</span>
+            </button>
+            <button class="flex-1 md:flex-none impact-gradient text-on-primary px-6 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-opacity shadow-[0_4px_12px_rgba(0,104,87,0.2)] flex items-center justify-center gap-2">
+                <span class="material-symbols-outlined text-[18px]">add</span>
+                <span class="whitespace-nowrap">New Program</span>
+            </button>
+        </div>
+    </div>
 </div>
 <!-- Scrollable Content -->
 <div class="flex-1 overflow-y-auto px-6 md:px-12 pb-24 md:pb-12 custom-scrollbar">
@@ -336,21 +348,19 @@
 </div>
 </div>
 </div>
-</main>
-<style>
-        /* Custom scrollbar for webkit to maintain clean aesthetic */
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
+    </main>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const sideNav = document.getElementById('side-nav');
+        const sideNavOverlay = document.getElementById('side-nav-overlay');
+
+        function toggleMenu() {
+            sideNav.classList.toggle('-translate-x-full');
+            sideNavOverlay.classList.toggle('hidden');
+            document.body.classList.toggle('overflow-hidden');
         }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: transparent; 
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: rgba(109, 122, 117, 0.2); 
-            border-radius: 10px;
-        }
-        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: rgba(109, 122, 117, 0.4); 
-        }
-    </style>
+
+        menuToggle?.addEventListener('click', toggleMenu);
+        sideNavOverlay?.addEventListener('click', toggleMenu);
+    </script>
 </body></html>

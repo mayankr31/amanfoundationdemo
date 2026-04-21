@@ -1,0 +1,10 @@
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/impact_dashboard_aman_foundation/code.html",
+      "permanent": true
+    }
+  ],
+  "cleanUrls": true
+}

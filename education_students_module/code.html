@@ -82,7 +82,7 @@
 </head>
 <body class="bg-background text-on-surface antialiased flex flex-col md:flex-row min-h-screen">
 <!-- SideNavBar -->
-<nav class="bg-slate-50 dark:bg-slate-900 text-teal-800 dark:text-teal-400 font-sans tracking-tight text-sm font-medium h-screen w-64 fixed left-0 top-0 overflow-y-auto shadow-[8px_0_24px_rgba(0,0,0,0.04)] z-50 flex flex-col p-6 gap-2 border-r border-slate-100 dark:border-slate-800 hidden md:flex">
+<nav id="side-nav" class="bg-slate-50 dark:bg-slate-900 text-teal-800 dark:text-teal-400 font-sans tracking-tight text-sm font-medium h-screen w-64 fixed left-0 top-0 overflow-y-auto shadow-[8px_0_24px_rgba(0,0,0,0.04)] z-[60] flex flex-col p-6 gap-2 border-r border-slate-100 dark:border-slate-800 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out">
     <!-- Brand -->
     <div class="flex items-center gap-3 mb-8 px-2">
         <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary-container flex items-center justify-center text-on-primary shrink-0 ambient-shadow">
@@ -145,13 +145,19 @@
             Logout
         </a>
     </div>
+    </div>
 </nav>
+<!-- Mobile Sidebar Overlay -->
+<div id="side-nav-overlay" class="fixed inset-0 bg-black/50 z-[55] hidden transition-opacity duration-300"></div>
 
 <!-- Main Canvas -->
 <div class="flex-1 ml-0 md:ml-64 flex flex-col min-h-screen bg-surface">
 <!-- TopAppBar -->
-<header class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md text-teal-700 dark:text-teal-400 font-sans text-sm tracking-wide uppercase font-semibold sticky top-0 z-40 w-full flex justify-between items-center h-16 px-8 scale-95 active:scale-90 transition-transform">
+<header class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md text-teal-700 dark:text-teal-400 font-sans text-sm tracking-wide uppercase font-semibold sticky top-0 z-40 w-full flex justify-between items-center h-16 px-8 border-b border-surface-container/50 transition-all duration-300 flex-shrink-0">
     <div class="flex items-center gap-4">
+        <button id="menu-toggle" class="md:hidden text-slate-500 hover:text-teal-600 p-2 rounded-full hover:bg-slate-100 transition-colors">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
         <span class="text-xl font-black text-slate-900 dark:text-white normal-case tracking-normal">Impact Portal</span>
     </div>
     <div class="flex items-center gap-4">
@@ -171,6 +177,10 @@
 <!-- Canvas Area -->
 <main class="flex-1 p-6 md:p-8 lg:p-12 pb-24 overflow-x-hidden">
 <!-- Header Section -->
+<a href="../education_management_hub/code.html" class="flex items-center gap-2 text-slate-500 hover:text-teal-600 transition-colors mb-6 group w-fit">
+    <span class="material-symbols-outlined text-sm group-hover:-translate-x-1 transition-transform tracking-normal">arrow_back</span>
+    <span class="text-[10px] font-bold uppercase tracking-widest">Back to Education Hub</span>
+</a>
 <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
 <div>
 <h2 class="text-3xl md:text-[2.75rem] font-bold text-on-surface tracking-tight leading-tight font-headline">Students Directory</h2>
@@ -226,13 +236,13 @@
 <!-- Student Data Container -->
 <div class="bg-surface-container-lowest rounded-xl overflow-hidden pt-4 pb-2">
 <div class="overflow-x-auto">
-<table class="w-full text-left border-collapse">
+<table class="w-full text-left border-collapse min-w-[800px]">
 <thead>
 <tr class="text-xs uppercase tracking-widest text-on-surface-variant font-label border-b-2 border-surface-container">
-<th class="px-6 py-4 font-semibold w-1/4">Student Info</th>
-<th class="px-6 py-4 font-semibold w-1/4">School Linkage</th>
-<th class="px-6 py-4 font-semibold w-1/4">Academic Progress</th>
-<th class="px-6 py-4 font-semibold text-right w-1/4">Actions</th>
+<th class="px-6 py-4 font-semibold">Student Info</th>
+<th class="px-6 py-4 font-semibold">School Linkage</th>
+<th class="px-6 py-4 font-semibold">Academic Progress</th>
+<th class="px-6 py-4 font-semibold text-right">Actions</th>
 </tr>
 </thead>
 <tbody class="text-sm">
@@ -396,4 +406,19 @@
 </div>
 <!-- BottomNavBar (Mobile) - Hidden on Web as per semantic shell mandate for top level nav -->
 
+    </main>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const sideNav = document.getElementById('side-nav');
+        const sideNavOverlay = document.getElementById('side-nav-overlay');
+
+        function toggleMenu() {
+            sideNav.classList.toggle('-translate-x-full');
+            sideNavOverlay.classList.toggle('hidden');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        menuToggle?.addEventListener('click', toggleMenu);
+        sideNavOverlay?.addEventListener('click', toggleMenu);
+    </script>
 </body></html>

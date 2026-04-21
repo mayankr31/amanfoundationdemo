@@ -89,7 +89,7 @@
 </head>
 <body class="bg-surface text-on-surface flex min-h-screen selection:bg-primary-container selection:text-on-primary-container">
 <!-- SideNavBar -->
-<nav class="bg-slate-50 dark:bg-slate-900 text-teal-800 dark:text-teal-400 font-sans tracking-tight text-sm font-medium h-screen w-64 fixed left-0 top-0 overflow-y-auto shadow-[8px_0_24px_rgba(0,0,0,0.04)] z-50 flex flex-col p-6 gap-2 border-r border-slate-100 dark:border-slate-800 hidden md:flex">
+<nav id="side-nav" class="bg-slate-50 dark:bg-slate-900 text-teal-800 dark:text-teal-400 font-sans tracking-tight text-sm font-medium h-screen w-64 fixed left-0 top-0 overflow-y-auto shadow-[8px_0_24px_rgba(0,0,0,0.04)] z-[60] flex flex-col p-6 gap-2 border-r border-slate-100 dark:border-slate-800 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out">
     <!-- Brand -->
     <div class="flex items-center gap-3 mb-8 px-2">
         <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary-container flex items-center justify-center text-on-primary shrink-0 ambient-shadow">
@@ -152,13 +152,19 @@
             Logout
         </a>
     </div>
+    </div>
 </nav>
+<!-- Mobile Sidebar Overlay -->
+<div id="side-nav-overlay" class="fixed inset-0 bg-black/50 z-[55] hidden transition-opacity duration-300"></div>
 <!-- Main Content Canvas -->
 <main class="flex-1 ml-0 md:ml-64 flex flex-col h-screen overflow-y-auto bg-surface">
 <!-- TopNavBar (Responsive & Web Header) -->
 <!-- TopAppBar -->
-<header class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md text-teal-700 dark:text-teal-400 font-sans text-sm tracking-wide uppercase font-semibold sticky top-0 z-40 w-full flex justify-between items-center h-16 px-8 scale-95 active:scale-90 transition-transform">
+<header class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md text-teal-700 dark:text-teal-400 font-sans text-sm tracking-wide uppercase font-semibold sticky top-0 z-40 w-full flex justify-between items-center h-16 px-8 border-b border-surface-container/50 transition-all duration-300 flex-shrink-0">
     <div class="flex items-center gap-4">
+        <button id="menu-toggle" class="md:hidden text-slate-500 hover:text-teal-600 p-2 rounded-full hover:bg-slate-100 transition-colors">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
         <span class="text-xl font-black text-slate-900 dark:text-white normal-case tracking-normal">Impact Portal</span>
     </div>
     <div class="flex items-center gap-4">
@@ -178,18 +184,30 @@
 <!-- Page Canvas -->
 <div class="p-6 lg:p-10 flex flex-col gap-10 max-w-[1600px] mx-auto w-full">
 <!-- Editorial Header -->
+<a href="../education_management_hub/code.html" class="flex items-center gap-2 text-slate-500 hover:text-teal-600 transition-colors mb-6 group w-fit">
+    <span class="material-symbols-outlined text-sm group-hover:-translate-x-1 transition-transform tracking-normal">arrow_back</span>
+    <span class="text-[10px] font-bold uppercase tracking-widest">Back to Education Hub</span>
+</a>
 <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
 <div>
 <h2 class="font-headline text-[2.75rem] leading-none tracking-[-0.02em] text-on-surface mb-3">Education Module</h2>
 <p class="font-body text-lg text-on-surface-variant max-w-2xl">Monitoring school profiles, program participation, and geographic impact across targeted regions.</p>
 </div>
-<div class="flex gap-3">
-<button class="px-5 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface font-label text-sm uppercase tracking-widest flex items-center gap-2">
-<span class="material-symbols-outlined text-[18px]">download</span> Export Data
-                    </button>
-<button class="px-5 py-2.5 rounded-full bg-primary text-on-primary hover:opacity-90 transition-opacity font-label text-sm uppercase tracking-widest flex items-center gap-2 shadow-[0_8px_24px_-10px_rgba(0,104,87,0.4)]">
-<span class="material-symbols-outlined text-[18px]">add</span> Add School
-                    </button>
+<div class="flex flex-wrap items-center gap-4 w-full xl:w-auto mt-4 xl:mt-0">
+    <div class="relative w-full sm:w-64">
+        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">search</span>
+        <input class="w-full pl-10 pr-4 py-2 bg-surface-container rounded-full border-none focus:ring-2 focus:ring-primary text-sm placeholder-on-surface-variant/70 transition-shadow" placeholder="Search schools..." type="text"/>
+    </div>
+    <div class="flex flex-wrap items-center gap-3 w-full sm:w-auto">
+        <button class="flex-1 sm:flex-none px-5 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface font-label text-sm uppercase tracking-widest flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-[18px]">download</span> 
+            <span class="whitespace-nowrap">Export Data</span>
+        </button>
+        <button class="flex-1 sm:flex-none px-5 py-2.5 rounded-full bg-primary text-on-primary hover:opacity-90 transition-opacity font-label text-sm uppercase tracking-widest flex items-center justify-center gap-2 shadow-[0_8px_24px_-10px_rgba(0,104,87,0.4)]">
+            <span class="material-symbols-outlined text-[18px]">add</span> 
+            <span class="whitespace-nowrap">Add School</span>
+        </button>
+    </div>
 </div>
 </div>
 <!-- Bento Grid Layout -->
@@ -387,4 +405,19 @@
 </div>
 </div>
 </main>
+    </main>
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const sideNav = document.getElementById('side-nav');
+        const sideNavOverlay = document.getElementById('side-nav-overlay');
+
+        function toggleMenu() {
+            sideNav.classList.toggle('-translate-x-full');
+            sideNavOverlay.classList.toggle('hidden');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        menuToggle?.addEventListener('click', toggleMenu);
+        sideNavOverlay?.addEventListener('click', toggleMenu);
+    </script>
 </body></html>
