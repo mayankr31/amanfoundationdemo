@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aman Foundation - Students</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#ffdcc6",
+                        "primary": "#006857",
+                        "background": "#f8f9fa",
+                        "on-primary-fixed": "#00201a",
+                        "primary-container": "#00846e",
+                        "on-primary-container": "#f4fffa",
+                        "secondary": "#964900",
+                        "surface-container-low": "#f3f4f5",
+                        "surface-container-high": "#e7e8e9",
+                        "on-secondary-fixed-variant": "#723600",
+                        "on-tertiary-fixed-variant": "#41484a",
+                        "on-surface": "#191c1d",
+                        "primary-fixed": "#7cf8da",
+                        "surface-tint": "#006b59",
+                        "inverse-primary": "#5ddbbe",
+                        "error": "#ba1a1a",
+                        "surface": "#f8f9fa",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-error-container": "#93000a",
+                        "on-primary": "#ffffff",
+                        "surface-variant": "#e1e3e4",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-container": "#f9fdff",
+                        "secondary-fixed-dim": "#ffb786",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#5ddbbe",
+                        "on-secondary": "#ffffff",
+                        "outline": "#6d7a75",
+                        "on-secondary-container": "#5e2c00",
+                        "surface-dim": "#d9dadb",
+                        "tertiary-fixed-dim": "#c1c8ca",
+                        "inverse-on-surface": "#f0f1f2",
+                        "surface-container": "#edeeef",
+                        "on-background": "#191c1d",
+                        "surface-bright": "#f8f9fa",
+                        "on-tertiary-fixed": "#161d1f",
+                        "tertiary-fixed": "#dde4e6",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#311300",
+                        "inverse-surface": "#2e3132",
+                        "secondary-container": "#fc820c",
+                        "on-primary-fixed-variant": "#005143",
+                        "tertiary": "#565d5f",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#6f7678",
+                        "outline-variant": "#bccac4",
+                        "on-surface-variant": "#3d4945"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased flex flex-col md:flex-row min-h-screen">
+<!-- SideNavBar -->
+<nav class="bg-slate-50 dark:bg-slate-900 text-teal-800 dark:text-teal-400 font-sans tracking-tight text-sm font-medium h-screen w-64 fixed left-0 top-0 overflow-y-auto shadow-[8px_0_24px_rgba(0,0,0,0.04)] z-50 flex flex-col p-6 gap-2 border-r border-slate-100 dark:border-slate-800 hidden md:flex">
+    <!-- Brand -->
+    <div class="flex items-center gap-3 mb-8 px-2">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary-container flex items-center justify-center text-on-primary shrink-0 ambient-shadow">
+            <span class="material-symbols-outlined text-2xl icon-filled">local_library</span>
+        </div>
+        <div>
+            <h1 class="text-lg font-bold tracking-tighter text-teal-900 dark:text-teal-100 leading-tight whitespace-nowrap">Aman Foundation</h1>
+            <p class="text-xs text-on-surface-variant whitespace-nowrap">Impact Portal</p>
+        </div>
+    </div>
+
+    <div class="flex-1 flex flex-col gap-2">
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../impact_dashboard_aman_foundation/code.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            Dashboard
+        </a>
+        <div class="group flex flex-col gap-1">
+            <a class="flex items-center gap-3 px-4 py-3 bg-teal-700 text-white rounded-full shadow-lg shadow-teal-900/20 transition-all duration-300 ease-in-out" href="../education_management_hub/code.html">
+                <span class="material-symbols-outlined">school</span>
+                Education
+            </a>
+            <div class="ml-8 mt-1 hidden group-hover:flex flex-col gap-1 border-l-2 border-primary-container pl-2 transition-all duration-300">
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_fellows_module/code.html">Fellows</a>
+                <a class="text-xs font-semibold px-3 py-2 text-primary bg-primary-container/10 rounded-full" href="../education_students_module/code.html">Students</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_schools_module/code.html">Schools</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_pta_programs/code.html">PTA and Programs</a>
+            </div>
+        </div>
+        <div class="group flex flex-col gap-1">
+            <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../livelihood_management_hub/code.html">
+                <span class="material-symbols-outlined">agriculture</span>
+                Livelihood
+            </a>
+            <div class="ml-8 mt-1 hidden group-hover:flex flex-col gap-1 border-l-2 border-primary-container pl-2 transition-all duration-300">
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../livelihood_goat_rearing_1/code.html">Goat Rearing</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../livelihood_sugarcane_cultivation/code.html">Sugarcane Cultivation</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../beneficiary_master_profile/code.html">Beneficiaries</a>
+            </div>
+        </div>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../disaster_relief_management/code.html">
+            <span class="material-symbols-outlined">emergency</span>
+            Disaster Relief
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../hr_employee_management/code.html">
+            <span class="material-symbols-outlined">group</span>
+            HR Management
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../admin_access_control/code.html">
+            <span class="material-symbols-outlined">admin_panel_settings</span>
+            Admin &amp; Access
+        </a>
+    </div>
+    <div class="mt-auto border-t border-slate-100 pt-4 flex flex-col gap-2">
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-full transition-all" href="#">
+            <span class="material-symbols-outlined">help</span>
+            Help
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-full transition-all" href="#">
+            <span class="material-symbols-outlined">logout</span>
+            Logout
+        </a>
+    </div>
+</nav>
+
+<!-- Main Canvas -->
+<div class="flex-1 ml-0 md:ml-64 flex flex-col min-h-screen bg-surface">
+<!-- TopAppBar -->
+<header class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md text-teal-700 dark:text-teal-400 font-sans text-sm tracking-wide uppercase font-semibold sticky top-0 z-40 w-full flex justify-between items-center h-16 px-8 scale-95 active:scale-90 transition-transform">
+    <div class="flex items-center gap-4">
+        <span class="text-xl font-black text-slate-900 dark:text-white normal-case tracking-normal">Impact Portal</span>
+    </div>
+    <div class="flex items-center gap-4">
+        <div class="flex gap-2">
+            <button class="text-slate-500 hover:text-teal-600 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full p-2 flex items-center justify-center">
+                <span class="material-symbols-outlined">notifications</span>
+            </button>
+            <button class="text-slate-500 hover:text-teal-600 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full p-2 flex items-center justify-center">
+                <span class="material-symbols-outlined">settings</span>
+            </button>
+        </div>
+        <div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+            <img alt="User profile avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy0YC_TGbMxUogj7u6FlVKznrRAyySoM1Wk5t86itV9-_WFTvj8S0Yzjr9GbBo8Bfm5nmRm_UZNvqkNLAOwajxpIHTPsvU3uWB_8oQCTDeLlTy5FFvFEdJbGbOLV8T87s7JItDrrR2LELtEkIRHVgt-MZ4wCsnMNliGHkwJgzEzPmZLJ3RyksBBrHyBQUOrsN9TswbWGEUCWg7Kct8wDcojEkOb4jbZtq_alD8mtnNZfS9PFgwiRKdk4k-6T8WSccDJBrvSEgUpobq"/>
+        </div>
+    </div>
+</header>
+<!-- Canvas Area -->
+<main class="flex-1 p-6 md:p-8 lg:p-12 pb-24 overflow-x-hidden">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
+<div>
+<h2 class="text-3xl md:text-[2.75rem] font-bold text-on-surface tracking-tight leading-tight font-headline">Students Directory</h2>
+<p class="text-on-surface-variant mt-2 max-w-2xl text-sm md:text-base">Manage enrolled students, track academic progress, and monitor school linkages across all program areas.</p>
+</div>
+<div class="flex items-center gap-3 w-full md:w-auto">
+<div class="relative w-full md:w-64">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant pointer-events-none">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface-container rounded-full border-none focus:ring-2 focus:ring-primary text-sm placeholder-on-surface-variant/70 transition-shadow" placeholder="Search students..." type="text"/>
+</div>
+<button class="flex items-center justify-center gap-2 px-6 py-2 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-full hover:shadow-[0_8px_24px_rgba(0,104,87,0.2)] transition-all font-medium text-sm flex-shrink-0">
+<span class="material-symbols-outlined text-sm">download</span>
+                    Export
+                </button>
+</div>
+</div>
+<!-- Filters & Stats Bento -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+<div class="bg-surface-container-lowest rounded-xl p-6 relative overflow-hidden group hover:-translate-y-1 transition-transform duration-300">
+<div class="absolute inset-0 bg-gradient-to-br from-surface-container-low to-surface-container opacity-50"></div>
+<div class="relative z-10 flex flex-col gap-2">
+<span class="text-xs uppercase tracking-widest text-on-surface-variant font-label">Total Enrolled</span>
+<span class="text-3xl font-black text-on-surface tracking-tighter">4,285</span>
+<div class="flex items-center gap-1 text-primary text-xs font-medium mt-1">
+<span class="material-symbols-outlined text-xs">trending_up</span>
+<span>+12% this term</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-3 bg-surface-container-lowest rounded-xl p-6 flex flex-wrap gap-4 items-center">
+<span class="text-xs uppercase tracking-widest text-on-surface-variant font-label mr-2">Filters</span>
+<select class="bg-surface-container border-none rounded-full text-sm py-1.5 pl-4 pr-8 text-on-surface focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+<option>All Grades</option>
+<option>Primary (1-5)</option>
+<option>Middle (6-8)</option>
+<option>High (9-10)</option>
+</select>
+<select class="bg-surface-container border-none rounded-full text-sm py-1.5 pl-4 pr-8 text-on-surface focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+<option>All Performance</option>
+<option>Excellent</option>
+<option>Satisfactory</option>
+<option>Needs Attention</option>
+</select>
+<select class="bg-surface-container border-none rounded-full text-sm py-1.5 pl-4 pr-8 text-on-surface focus:ring-2 focus:ring-primary appearance-none cursor-pointer">
+<option>All Districts</option>
+<option>North District</option>
+<option>South District</option>
+<option>East District</option>
+</select>
+<button class="text-primary text-sm font-medium hover:underline ml-auto">Clear Filters</button>
+</div>
+</div>
+<!-- Student Data Container -->
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden pt-4 pb-2">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="text-xs uppercase tracking-widest text-on-surface-variant font-label border-b-2 border-surface-container">
+<th class="px-6 py-4 font-semibold w-1/4">Student Info</th>
+<th class="px-6 py-4 font-semibold w-1/4">School Linkage</th>
+<th class="px-6 py-4 font-semibold w-1/4">Academic Progress</th>
+<th class="px-6 py-4 font-semibold text-right w-1/4">Actions</th>
+</tr>
+</thead>
+<tbody class="text-sm">
+<!-- Row 1 -->
+<tr class="group hover:bg-surface-container-low/50 transition-colors">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-bold text-lg shrink-0">AK</div>
+<div>
+<div class="font-bold text-on-surface">Aarav Kumar</div>
+<div class="text-xs text-on-surface-variant mt-0.5">ID: STU-2023-089</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="font-medium text-on-surface">Vidya Mandir High School</div>
+<div class="text-xs text-on-surface-variant mt-0.5">Grade 8 • North District</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex flex-col gap-1.5 w-32">
+<div class="flex justify-between text-xs font-medium">
+<span class="text-on-surface">Attendance</span>
+<span class="text-primary">92%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full relative" style="width: 92%;">
+<div class="absolute right-0 top-0 bottom-0 w-2 bg-white/30 rounded-full blur-[1px]"></div>
+</div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed text-[10px] font-bold uppercase tracking-wider w-max mt-1">On Track</span>
+</div>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors inline-flex">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="group hover:bg-surface-container-low/50 transition-colors border-t border-surface-container-low">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold text-lg shrink-0">PS</div>
+<div>
+<div class="font-bold text-on-surface">Priya Singh</div>
+<div class="text-xs text-on-surface-variant mt-0.5">ID: STU-2023-142</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="font-medium text-on-surface">Saraswati Vidya Peeth</div>
+<div class="text-xs text-on-surface-variant mt-0.5">Grade 5 • East District</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex flex-col gap-1.5 w-32">
+<div class="flex justify-between text-xs font-medium">
+<span class="text-on-surface">Attendance</span>
+<span class="text-secondary">68%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full relative" style="width: 68%;"></div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-error-container text-on-error-container text-[10px] font-bold uppercase tracking-wider w-max mt-1">Needs Attention</span>
+</div>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors inline-flex">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="group hover:bg-surface-container-low/50 transition-colors border-t border-surface-container-low">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-variant text-on-surface flex items-center justify-center font-bold text-lg shrink-0">RD</div>
+<div>
+<div class="font-bold text-on-surface">Rahul Desai</div>
+<div class="text-xs text-on-surface-variant mt-0.5">ID: STU-2022-401</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="font-medium text-on-surface">Global Vision Academy</div>
+<div class="text-xs text-on-surface-variant mt-0.5">Grade 10 • South District</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex flex-col gap-1.5 w-32">
+<div class="flex justify-between text-xs font-medium">
+<span class="text-on-surface">Attendance</span>
+<span class="text-primary">98%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full relative" style="width: 98%;">
+<div class="absolute right-0 top-0 bottom-0 w-2 bg-white/30 rounded-full blur-[1px]"></div>
+</div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed text-[10px] font-bold uppercase tracking-wider w-max mt-1">Excelling</span>
+</div>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors inline-flex">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="group hover:bg-surface-container-low/50 transition-colors border-t border-surface-container-low">
+<td class="px-6 py-5">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-bold text-lg shrink-0">MP</div>
+<div>
+<div class="font-bold text-on-surface">Meera Patel</div>
+<div class="text-xs text-on-surface-variant mt-0.5">ID: STU-2024-012</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-5">
+<div class="font-medium text-on-surface">Vidya Mandir High School</div>
+<div class="text-xs text-on-surface-variant mt-0.5">Grade 6 • North District</div>
+</td>
+<td class="px-6 py-5">
+<div class="flex flex-col gap-1.5 w-32">
+<div class="flex justify-between text-xs font-medium">
+<span class="text-on-surface">Attendance</span>
+<span class="text-on-surface-variant">85%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-surface-tint rounded-full relative" style="width: 85%;"></div>
+</div>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant text-[10px] font-bold uppercase tracking-wider w-max mt-1">Satisfactory</span>
+</div>
+</td>
+<td class="px-6 py-5 text-right">
+<button class="text-primary hover:bg-primary/10 p-2 rounded-full transition-colors inline-flex">
+<span class="material-symbols-outlined text-[20px]">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="px-6 py-4 flex items-center justify-between border-t border-surface-container-low mt-2">
+<span class="text-xs text-on-surface-variant">Showing 1 to 4 of 4,285 entries</span>
+<div class="flex gap-2">
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-highest transition-colors text-on-surface-variant disabled:opacity-50">
+<span class="material-symbols-outlined text-sm">chevron_left</span>
+</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-primary text-white shadow-sm font-medium text-sm">1</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-highest transition-colors text-on-surface font-medium text-sm">2</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-highest transition-colors text-on-surface font-medium text-sm">3</button>
+<span class="w-8 h-8 flex items-center justify-center text-on-surface-variant text-sm">...</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-full bg-surface-container hover:bg-surface-container-highest transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- BottomNavBar (Mobile) - Hidden on Web as per semantic shell mandate for top level nav -->
+
+</body></html>

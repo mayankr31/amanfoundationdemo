@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aman Foundation - HR Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "on-primary-fixed": "#00201a",
+                    "on-tertiary-fixed": "#161d1f",
+                    "on-surface": "#191c1d",
+                    "on-error-container": "#93000a",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f8f9fa",
+                    "tertiary": "#565d5f",
+                    "surface-container-high": "#e7e8e9",
+                    "surface-tint": "#006b59",
+                    "secondary-container": "#fc820c",
+                    "surface-variant": "#e1e3e4",
+                    "surface-dim": "#d9dadb",
+                    "primary-container": "#00846e",
+                    "outline": "#6d7a75",
+                    "tertiary-fixed": "#dde4e6",
+                    "error-container": "#ffdad6",
+                    "surface-container-low": "#f3f4f5",
+                    "on-secondary-fixed-variant": "#723600",
+                    "surface-container": "#edeeef",
+                    "on-secondary": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-primary-fixed-variant": "#005143",
+                    "secondary-fixed-dim": "#ffb786",
+                    "on-tertiary-container": "#f9fdff",
+                    "secondary-fixed": "#ffdcc6",
+                    "outline-variant": "#bccac4",
+                    "on-secondary-fixed": "#311300",
+                    "inverse-on-surface": "#f0f1f2",
+                    "background": "#f8f9fa",
+                    "on-tertiary-fixed-variant": "#41484a",
+                    "on-tertiary": "#ffffff",
+                    "on-background": "#191c1d",
+                    "on-surface-variant": "#3d4945",
+                    "on-secondary-container": "#5e2c00",
+                    "tertiary-container": "#6f7678",
+                    "on-primary-container": "#f4fffa",
+                    "tertiary-fixed-dim": "#c1c8ca",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#2e3132",
+                    "primary-fixed": "#7cf8da",
+                    "surface-bright": "#f8f9fa",
+                    "secondary": "#964900",
+                    "inverse-primary": "#5ddbbe",
+                    "primary": "#006857",
+                    "primary-fixed-dim": "#5ddbbe"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter", "sans-serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .shadow-ambient {
+            box-shadow: 0 8px 24px rgba(25, 28, 29, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-screen flex antialiased">
+<!-- SideNavBar -->
+<nav class="bg-slate-50 dark:bg-slate-900 text-teal-800 dark:text-teal-400 font-sans tracking-tight text-sm font-medium h-screen w-64 fixed left-0 top-0 overflow-y-auto shadow-[8px_0_24px_rgba(0,0,0,0.04)] z-50 flex flex-col p-6 gap-2 border-r border-slate-100 dark:border-slate-800 hidden md:flex">
+    <!-- Brand -->
+    <div class="flex items-center gap-3 mb-8 px-2">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary-container flex items-center justify-center text-on-primary shrink-0 ambient-shadow">
+            <span class="material-symbols-outlined text-2xl icon-filled">local_library</span>
+        </div>
+        <div>
+            <h1 class="text-lg font-bold tracking-tighter text-teal-900 dark:text-teal-100 leading-tight whitespace-nowrap">Aman Foundation</h1>
+            <p class="text-xs text-on-surface-variant whitespace-nowrap">Impact Portal</p>
+        </div>
+    </div>
+
+    <div class="flex-1 flex flex-col gap-2">
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../impact_dashboard_aman_foundation/code.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            Dashboard
+        </a>
+        <div class="group flex flex-col gap-1">
+            <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../education_management_hub/code.html">
+                <span class="material-symbols-outlined">school</span>
+                Education
+            </a>
+            <div class="ml-8 mt-1 hidden group-hover:flex flex-col gap-1 border-l-2 border-primary-container pl-2 transition-all duration-300">
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_fellows_module/code.html">Fellows</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_students_module/code.html">Students</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_schools_module/code.html">Schools</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_pta_programs/code.html">PTA and Programs</a>
+            </div>
+        </div>
+        <div class="group flex flex-col gap-1">
+            <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../livelihood_management_hub/code.html">
+                <span class="material-symbols-outlined">agriculture</span>
+                Livelihood
+            </a>
+            <div class="ml-8 mt-1 hidden group-hover:flex flex-col gap-1 border-l-2 border-primary-container pl-2 transition-all duration-300">
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../livelihood_goat_rearing_1/code.html">Goat Rearing</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../livelihood_sugarcane_cultivation/code.html">Sugarcane Cultivation</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../beneficiary_master_profile/code.html">Beneficiaries</a>
+            </div>
+        </div>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../disaster_relief_management/code.html">
+            <span class="material-symbols-outlined">emergency</span>
+            Disaster Relief
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 bg-teal-700 text-white rounded-full shadow-lg shadow-teal-900/20 transition-all duration-300 ease-in-out" href="../hr_employee_management/code.html">
+            <span class="material-symbols-outlined">group</span>
+            HR Management
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../admin_access_control/code.html">
+            <span class="material-symbols-outlined">admin_panel_settings</span>
+            Admin &amp; Access
+        </a>
+    </div>
+    <div class="mt-auto border-t border-slate-100 pt-4 flex flex-col gap-2">
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-full transition-all" href="#">
+            <span class="material-symbols-outlined">help</span>
+            Help
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-full transition-all" href="#">
+            <span class="material-symbols-outlined">logout</span>
+            Logout
+        </a>
+    </div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 ml-0 md:ml-64 flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<!-- TopAppBar -->
+<header class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md text-teal-700 dark:text-teal-400 font-sans text-sm tracking-wide uppercase font-semibold sticky top-0 z-40 w-full flex justify-between items-center h-16 px-8 scale-95 active:scale-90 transition-transform">
+    <div class="flex items-center gap-4">
+        <span class="text-xl font-black text-slate-900 dark:text-white normal-case tracking-normal">Impact Portal</span>
+    </div>
+    <div class="flex items-center gap-4">
+        <div class="flex gap-2">
+            <button class="text-slate-500 hover:text-teal-600 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full p-2 flex items-center justify-center">
+                <span class="material-symbols-outlined">notifications</span>
+            </button>
+            <button class="text-slate-500 hover:text-teal-600 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full p-2 flex items-center justify-center">
+                <span class="material-symbols-outlined">settings</span>
+            </button>
+        </div>
+        <div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+            <img alt="User profile avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy0YC_TGbMxUogj7u6FlVKznrRAyySoM1Wk5t86itV9-_WFTvj8S0Yzjr9GbBo8Bfm5nmRm_UZNvqkNLAOwajxpIHTPsvU3uWB_8oQCTDeLlTy5FFvFEdJbGbOLV8T87s7JItDrrR2LELtEkIRHVgt-MZ4wCsnMNliGHkwJgzEzPmZLJ3RyksBBrHyBQUOrsN9TswbWGEUCWg7Kct8wDcojEkOb4jbZtq_alD8mtnNZfS9PFgwiRKdk4k-6T8WSccDJBrvSEgUpobq"/>
+        </div>
+    </div>
+</header>
+<!-- Canvas Body -->
+<div class="p-10 flex-1 flex flex-col gap-10 max-w-[1600px] w-full mx-auto">
+<!-- Page Header -->
+<div class="flex items-end justify-between">
+<div>
+<h2 class="text-[2.75rem] font-headline font-semibold tracking-tight leading-none text-on-surface mb-2">Organization Directory &amp; HR</h2>
+<p class="text-on-surface-variant font-body">Manage team operations, workflows, and operational protocols.</p>
+</div>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-label uppercase tracking-widest text-xs px-6 py-3 rounded-full hover:opacity-90 transition-opacity shadow-ambient flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">person_add</span>
+                    New Hire
+                </button>
+</div>
+<!-- Bento Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Main Column: Team Section -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<div class="bg-surface-container rounded-xl p-8 h-full flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline text-xl font-medium text-on-surface">Team Section</h3>
+<button class="text-primary hover:bg-primary/10 px-4 py-2 rounded-full font-label text-xs uppercase tracking-wider transition-colors">View Directory</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Employee Card 1 -->
+<div class="bg-surface-container-lowest rounded-lg p-6 shadow-ambient flex items-start gap-4 transition-transform hover:-translate-y-1">
+<img alt="Employee" class="w-14 h-14 rounded-full object-cover" data-alt="professional headshot of a smiling middle-aged woman with short hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCClzeDMhBwAeznn803n5CK7e8A60la6lLcJ1ojkBAsUYWg2FmfRgJtq4tsyt-isyaAAC77nv_ww_jP9lM144ar0FjAZIygtWyUgJS_g2Mjju-mzhi84GhcCqgmFtP0cx0SMNFYk5QeXsVX5vS4fdw_H2VJRhn4rE1U7U4tKZeMl5joS5awhDNJBTT6iJ1OBUYs8Jc0LEn7VukXipXIu03fd4gbQYYkoPaO1CoXPYL4JRUMx8I6FczVZ2IFoXZEYPkUkKtZ2v_OLDuY"/>
+<div class="flex-1">
+<h4 class="font-headline font-semibold text-on-surface leading-tight">Sarah Jenkins</h4>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant mt-1 mb-3">Field Operations Lead</p>
+<span class="bg-primary-fixed text-on-primary-fixed font-label text-[0.65rem] uppercase tracking-wider px-2.5 py-1 rounded-full">Active Mission</span>
+</div>
+</div>
+<!-- Employee Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg p-6 shadow-ambient flex items-start gap-4 transition-transform hover:-translate-y-1">
+<img alt="Employee" class="w-14 h-14 rounded-full object-cover" data-alt="professional headshot of a young man with glasses and a slight smile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIdg5tUgCnHt9Epqbmrw-SGBdihjkZmbD8xlBNpt4ccyeXnp-PyMJR96m6NIQdFy9dYy-1Izaoh3rIyAxwQvSZxljx2u3XWEBCW1wFt67cuqC5LnSiyr_JShVW-QAoYDhMq_CcIGSDORFpW6eAv4SVCNiTvv3Sb2jJ852ICmlXrKDBXBj1cdK1paNLE4CZUS1nEh88aU0JWvXXWu7apw2785QWgrM0my24VnNIImkTw-9Pm4rUZI6pK7Qnkf0GIbZzuAuRHwbtwsDb"/>
+<div class="flex-1">
+<h4 class="font-headline font-semibold text-on-surface leading-tight">David Chen</h4>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant mt-1 mb-3">Relief Coordinator</p>
+<span class="bg-surface-container-high text-on-surface font-label text-[0.65rem] uppercase tracking-wider px-2.5 py-1 rounded-full">In Office</span>
+</div>
+</div>
+<!-- Employee Card 3 -->
+<div class="bg-surface-container-lowest rounded-lg p-6 shadow-ambient flex items-start gap-4 transition-transform hover:-translate-y-1">
+<div class="w-14 h-14 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-headline font-semibold text-xl">ML</div>
+<div class="flex-1">
+<h4 class="font-headline font-semibold text-on-surface leading-tight">Maria Lopez</h4>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant mt-1 mb-3">Education Specialist</p>
+<span class="bg-surface-container-high text-on-surface font-label text-[0.65rem] uppercase tracking-wider px-2.5 py-1 rounded-full">On Leave</span>
+</div>
+</div>
+<!-- Employee Card 4 -->
+<div class="bg-surface-container-lowest rounded-lg p-6 shadow-ambient flex items-start gap-4 transition-transform hover:-translate-y-1">
+<img alt="Employee" class="w-14 h-14 rounded-full object-cover" data-alt="professional headshot of a woman with curly hair looking confident" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRd0k4EJ2wuO2sZgDCwpwIR3Vfee0luhShu6AV3XyruUxYb0DhGsCrRwV_JXGKASS6E7yBF2v6tWyK0rDVIvHM4s5tLqdQi124wYaCHNZHyNQkXwMCW-GX9avs3vqQeQtypJmqOsqOTcRL5cPI77cYPh2m_FcfMG0QA1rIZcr1i1Iu-b9NztqVhCIzIQ-qc_AlPEWy-gYRQMQT31Xw2GBHw5_vudgIpUGDNvB5ND5ohfUNFAihqMhn6gQvJ6N85p4XtOcDShymRhN0"/>
+<div class="flex-1">
+<h4 class="font-headline font-semibold text-on-surface leading-tight">Aisha Patel</h4>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant mt-1 mb-3">HR Generalist</p>
+<span class="bg-surface-container-high text-on-surface font-label text-[0.65rem] uppercase tracking-wider px-2.5 py-1 rounded-full">In Office</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Column -->
+<div class="lg:col-span-4 flex flex-col gap-8">
+<!-- Leave Workflow -->
+<div class="bg-surface-container rounded-xl p-8">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">event_note</span>
+</div>
+<h3 class="font-headline text-xl font-medium text-on-surface">Leave Workflow</h3>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Pending Request 1 -->
+<div class="bg-surface-container-lowest rounded-lg p-5 shadow-ambient flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div>
+<p class="font-headline font-medium text-on-surface">Annual Leave</p>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant mt-1">David Chen</p>
+</div>
+<span class="bg-secondary-fixed text-on-secondary-fixed font-label text-[0.65rem] uppercase tracking-wider px-2 py-1 rounded-full">Pending</span>
+</div>
+<p class="text-sm text-on-surface-variant">Oct 12 - Oct 20 (8 days)</p>
+<div class="flex gap-2 mt-2">
+<button class="flex-1 bg-surface-container-high hover:bg-surface-variant text-on-surface font-label text-xs uppercase tracking-wider py-2 rounded-full transition-colors">Deny</button>
+<button class="flex-1 bg-primary text-on-primary font-label text-xs uppercase tracking-wider py-2 rounded-full transition-colors">Approve</button>
+</div>
+</div>
+</div>
+</div>
+<!-- SOP Library -->
+<div class="bg-surface-container rounded-xl p-8">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">library_books</span>
+</div>
+<h3 class="font-headline text-xl font-medium text-on-surface">SOP Library</h3>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-4 p-3 hover:bg-surface-container-high rounded-lg transition-colors cursor-pointer group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface-variant group-hover:text-primary transition-colors shadow-sm">
+<span class="material-symbols-outlined">health_and_safety</span>
+</div>
+<div class="flex-1">
+<p class="font-medium text-on-surface text-sm">Safety Protocol</p>
+<p class="text-xs text-on-surface-variant mt-0.5">Updated Aug 2023</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+<div class="flex items-center gap-4 p-3 hover:bg-surface-container-high rounded-lg transition-colors cursor-pointer group">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-on-surface-variant group-hover:text-primary transition-colors shadow-sm">
+<span class="material-symbols-outlined">policy</span>
+</div>
+<div class="flex-1">
+<p class="font-medium text-on-surface text-sm">Leave Policy</p>
+<p class="text-xs text-on-surface-variant mt-0.5">Updated Jan 2024</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

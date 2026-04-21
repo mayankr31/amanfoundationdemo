@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin &amp; Access | Aman Foundation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-error": "#ffffff",
+                      "on-primary-fixed": "#00201a",
+                      "on-tertiary-fixed": "#161d1f",
+                      "on-surface": "#191c1d",
+                      "on-error-container": "#93000a",
+                      "surface-container-lowest": "#ffffff",
+                      "surface": "#f8f9fa",
+                      "tertiary": "#565d5f",
+                      "surface-container-high": "#e7e8e9",
+                      "surface-tint": "#006b59",
+                      "secondary-container": "#fc820c",
+                      "surface-variant": "#e1e3e4",
+                      "surface-dim": "#d9dadb",
+                      "primary-container": "#00846e",
+                      "outline": "#6d7a75",
+                      "tertiary-fixed": "#dde4e6",
+                      "error-container": "#ffdad6",
+                      "surface-container-low": "#f3f4f5",
+                      "on-secondary-fixed-variant": "#723600",
+                      "surface-container": "#edeeef",
+                      "on-secondary": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "surface-container-highest": "#e1e3e4",
+                      "on-primary-fixed-variant": "#005143",
+                      "secondary-fixed-dim": "#ffb786",
+                      "on-tertiary-container": "#f9fdff",
+                      "secondary-fixed": "#ffdcc6",
+                      "outline-variant": "#bccac4",
+                      "on-secondary-fixed": "#311300",
+                      "inverse-on-surface": "#f0f1f2",
+                      "background": "#f8f9fa",
+                      "on-tertiary-fixed-variant": "#41484a",
+                      "on-tertiary": "#ffffff",
+                      "on-background": "#191c1d",
+                      "on-surface-variant": "#3d4945",
+                      "on-secondary-container": "#5e2c00",
+                      "tertiary-container": "#6f7678",
+                      "on-primary-container": "#f4fffa",
+                      "tertiary-fixed-dim": "#c1c8ca",
+                      "error": "#ba1a1a",
+                      "inverse-surface": "#2e3132",
+                      "primary-fixed": "#7cf8da",
+                      "surface-bright": "#f8f9fa",
+                      "secondary": "#964900",
+                      "inverse-primary": "#5ddbbe",
+                      "primary": "#006857",
+                      "primary-fixed-dim": "#5ddbbe"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "1rem",
+                      "xl": "1.5rem",
+                      "full": "9999px"
+              },
+              "spacing": {},
+              "fontFamily": {
+                      "headline": ["Inter"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-panel { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+        .ambient-shadow { box-shadow: 0 8px 24px rgba(25, 28, 29, 0.04); }
+        .impact-gradient { background: linear-gradient(135deg, #006857 0%, #00846e 100%); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface h-screen overflow-hidden flex font-body">
+<!-- SideNavBar -->
+<!-- SideNavBar -->
+<nav class="bg-slate-50 dark:bg-slate-900 text-teal-800 dark:text-teal-400 font-sans tracking-tight text-sm font-medium h-screen w-64 fixed left-0 top-0 overflow-y-auto shadow-[8px_0_24px_rgba(0,0,0,0.04)] z-50 flex flex-col p-6 gap-2 border-r border-slate-100 dark:border-slate-800 hidden md:flex">
+    <!-- Brand -->
+    <div class="flex items-center gap-3 mb-8 px-2">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary-container flex items-center justify-center text-on-primary shrink-0 ambient-shadow">
+            <span class="material-symbols-outlined text-2xl icon-filled">local_library</span>
+        </div>
+        <div>
+            <h1 class="text-lg font-bold tracking-tighter text-teal-900 dark:text-teal-100 leading-tight whitespace-nowrap">Aman Foundation</h1>
+            <p class="text-xs text-on-surface-variant whitespace-nowrap">Impact Portal</p>
+        </div>
+    </div>
+
+    <div class="flex-1 flex flex-col gap-2">
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../impact_dashboard_aman_foundation/code.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            Dashboard
+        </a>
+        <div class="group flex flex-col gap-1">
+            <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../education_management_hub/code.html">
+                <span class="material-symbols-outlined">school</span>
+                Education
+            </a>
+            <div class="ml-8 mt-1 hidden group-hover:flex flex-col gap-1 border-l-2 border-primary-container pl-2 transition-all duration-300">
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_fellows_module/code.html">Fellows</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_students_module/code.html">Students</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_schools_module/code.html">Schools</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_pta_programs/code.html">PTA and Programs</a>
+            </div>
+        </div>
+        <div class="group flex flex-col gap-1">
+            <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../livelihood_management_hub/code.html">
+                <span class="material-symbols-outlined">agriculture</span>
+                Livelihood
+            </a>
+            <div class="ml-8 mt-1 hidden group-hover:flex flex-col gap-1 border-l-2 border-primary-container pl-2 transition-all duration-300">
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../livelihood_goat_rearing_1/code.html">Goat Rearing</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../livelihood_sugarcane_cultivation/code.html">Sugarcane Cultivation</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../beneficiary_master_profile/code.html">Beneficiaries</a>
+            </div>
+        </div>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../disaster_relief_management/code.html">
+            <span class="material-symbols-outlined">emergency</span>
+            Disaster Relief
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../hr_employee_management/code.html">
+            <span class="material-symbols-outlined">group</span>
+            HR Management
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 bg-teal-700 text-white rounded-full shadow-lg shadow-teal-900/20 transition-all duration-300 ease-in-out" href="../admin_access_control/code.html">
+            <span class="material-symbols-outlined">admin_panel_settings</span>
+            Admin &amp; Access
+        </a>
+    </div>
+    <div class="mt-auto border-t border-slate-100 pt-4 flex flex-col gap-2">
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-full transition-all" href="#">
+            <span class="material-symbols-outlined">help</span>
+            Help
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-full transition-all" href="#">
+            <span class="material-symbols-outlined">logout</span>
+            Logout
+        </a>
+    </div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 ml-0 md:ml-64 flex flex-col h-screen overflow-hidden bg-surface">
+<!-- TopAppBar -->
+<!-- TopAppBar -->
+<header class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md text-teal-700 dark:text-teal-400 font-sans text-sm tracking-wide uppercase font-semibold sticky top-0 z-40 w-full flex justify-between items-center h-16 px-8 scale-95 active:scale-90 transition-transform">
+    <div class="flex items-center gap-4">
+        <span class="text-xl font-black text-slate-900 dark:text-white normal-case tracking-normal">Impact Portal</span>
+    </div>
+    <div class="flex items-center gap-4">
+        <div class="flex gap-2">
+            <button class="text-slate-500 hover:text-teal-600 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full p-2 flex items-center justify-center">
+                <span class="material-symbols-outlined">notifications</span>
+            </button>
+            <button class="text-slate-500 hover:text-teal-600 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full p-2 flex items-center justify-center">
+                <span class="material-symbols-outlined">settings</span>
+            </button>
+        </div>
+        <div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+            <img alt="User profile avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy0YC_TGbMxUogj7u6FlVKznrRAyySoM1Wk5t86itV9-_WFTvj8S0Yzjr9GbBo8Bfm5nmRm_UZNvqkNLAOwajxpIHTPsvU3uWB_8oQCTDeLlTy5FFvFEdJbGbOLV8T87s7JItDrrR2LELtEkIRHVgt-MZ4wCsnMNliGHkwJgzEzPmZLJ3RyksBBrHyBQUOrsN9TswbWGEUCWg7Kct8wDcojEkOb4jbZtq_alD8mtnNZfS9PFgwiRKdk4k-6T8WSccDJBrvSEgUpobq"/>
+        </div>
+    </div>
+</header>
+<!-- Scrollable Canvas -->
+<div class="flex-1 overflow-y-auto p-8 lg:p-12 pb-24">
+<div class="max-w-7xl mx-auto space-y-8">
+<!-- Hero Metrics Bento -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-lowest rounded-lg p-6 pt-8 pl-8 ambient-shadow flex flex-col justify-between min-h-[160px] border border-outline-variant/15 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full blur-xl"></div>
+<h3 class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2 z-10">Total Active Users</h3>
+<div class="flex items-baseline gap-3 z-10 mt-auto">
+<span class="font-headline text-[2.75rem] font-bold tracking-tight text-on-surface leading-none">2,408</span>
+<span class="flex items-center text-primary font-medium text-sm bg-primary-container/10 px-2 py-0.5 rounded-full"><span class="material-symbols-outlined text-sm mr-1">trending_up</span> +12%</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-lg p-6 pt-8 pl-8 ambient-shadow flex flex-col justify-between min-h-[160px] border border-outline-variant/15">
+<h3 class="font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2">Pending Approvals</h3>
+<div class="flex items-baseline gap-3 mt-auto">
+<span class="font-headline text-[2.75rem] font-bold tracking-tight text-secondary leading-none">14</span>
+<span class="text-on-surface-variant text-sm font-medium">Requires action</span>
+</div>
+</div>
+<!-- Quick Actions Glass Card -->
+<div class="bg-primary text-on-primary rounded-lg p-6 pt-8 pl-8 shadow-lg shadow-primary/20 flex flex-col justify-between min-h-[160px] impact-gradient relative overflow-hidden">
+<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+<h3 class="font-label text-xs uppercase tracking-widest text-primary-fixed mb-2 relative z-10">Quick Actions</h3>
+<div class="flex flex-col gap-3 mt-auto relative z-10">
+<button class="bg-surface-container-lowest/15 hover:bg-surface-container-lowest/25 text-white py-2 px-4 rounded-full text-sm font-medium flex items-center justify-between transition-colors backdrop-blur-sm border border-white/10">
+<span>Invite New User</span>
+<span class="material-symbols-outlined text-sm">person_add</span>
+</button>
+<button class="bg-surface-container-lowest/15 hover:bg-surface-container-lowest/25 text-white py-2 px-4 rounded-full text-sm font-medium flex items-center justify-between transition-colors backdrop-blur-sm border border-white/10">
+<span>Manage Roles</span>
+<span class="material-symbols-outlined text-sm">shield_person</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Layout Area -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Left Col: Active Users Chart & Table (Spans 2) -->
+<div class="lg:col-span-2 space-y-8">
+<!-- Role Distribution -->
+<div class="bg-surface-container-lowest rounded-lg p-6 pt-8 pl-8 ambient-shadow border border-outline-variant/15">
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-headline text-lg font-semibold text-on-surface">Active Users by Role</h2>
+<button class="text-primary hover:bg-primary/5 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined">more_horiz</span>
+</button>
+</div>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-32 text-sm font-medium text-on-surface-variant text-right">Field Officers</div>
+<div class="flex-1 h-3 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full relative" style="width: 65%;">
+<div class="absolute right-0 top-0 bottom-0 w-4 bg-white/20 blur-[2px]"></div>
+</div>
+</div>
+<div class="w-12 text-sm font-bold text-on-surface text-right">1,565</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-32 text-sm font-medium text-on-surface-variant text-right">Program Mgrs</div>
+<div class="flex-1 h-3 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-primary-container rounded-full relative" style="width: 25%;"></div>
+</div>
+<div class="w-12 text-sm font-bold text-on-surface text-right">602</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-32 text-sm font-medium text-on-surface-variant text-right">System Admins</div>
+<div class="flex-1 h-3 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary-container rounded-full relative" style="width: 8%;"></div>
+</div>
+<div class="w-12 text-sm font-bold text-on-surface text-right">192</div>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-32 text-sm font-medium text-on-surface-variant text-right">Super Admins</div>
+<div class="flex-1 h-3 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full relative" style="width: 2%;"></div>
+</div>
+<div class="w-12 text-sm font-bold text-on-surface text-right">49</div>
+</div>
+</div>
+</div>
+<!-- User Directory Table -->
+<div class="bg-surface-container-lowest rounded-lg pt-6 ambient-shadow border border-outline-variant/15 overflow-hidden">
+<div class="px-6 pb-4 flex justify-between items-center bg-surface-container-lowest border-b border-surface-container">
+<h2 class="font-headline text-lg font-semibold text-on-surface">User Directory</h2>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-sm">search</span>
+<input class="pl-9 pr-4 py-2 bg-surface rounded-full text-sm font-medium border-none focus:ring-2 focus:ring-primary/20 w-64 text-on-surface placeholder:text-outline-variant" placeholder="Search users..." type="text"/>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-surface-container">
+<th class="py-3 px-6 font-label text-xs uppercase tracking-widest text-on-surface-variant">Name</th>
+<th class="py-3 px-6 font-label text-xs uppercase tracking-widest text-on-surface-variant">Role</th>
+<th class="py-3 px-6 font-label text-xs uppercase tracking-widest text-on-surface-variant">Status</th>
+<th class="py-3 px-6 font-label text-xs uppercase tracking-widest text-on-surface-variant text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="text-sm font-medium">
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-4 px-6 border-b border-surface-container">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-xs">AS</div>
+<div>
+<div class="text-on-surface">Aisha Sharma</div>
+<div class="text-on-surface-variant text-xs font-normal">aisha.s@aman.org</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 border-b border-surface-container text-on-surface-variant">Program Mgr</td>
+<td class="py-4 px-6 border-b border-surface-container">
+<span class="bg-primary-fixed text-on-primary-fixed px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider">Active</span>
+</td>
+<td class="py-4 px-6 border-b border-surface-container text-right">
+<button class="text-outline hover:text-primary transition-colors p-1"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-4 px-6 border-b border-surface-container">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-container/20 text-secondary flex items-center justify-center font-bold text-xs">RK</div>
+<div>
+<div class="text-on-surface">Rahul Kumar</div>
+<div class="text-on-surface-variant text-xs font-normal">rahul.k@aman.org</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 border-b border-surface-container text-on-surface-variant">Field Officer</td>
+<td class="py-4 px-6 border-b border-surface-container">
+<span class="bg-secondary-fixed text-on-secondary-fixed px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider">On Leave</span>
+</td>
+<td class="py-4 px-6 border-b border-surface-container text-right">
+<button class="text-outline hover:text-primary transition-colors p-1"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-4 px-6 border-b border-surface-container">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-error-container/50 text-error flex items-center justify-center font-bold text-xs">MF</div>
+<div>
+<div class="text-on-surface">Maria Fernandez</div>
+<div class="text-on-surface-variant text-xs font-normal">maria.f@aman.org</div>
+</div>
+</div>
+</td>
+<td class="py-4 px-6 border-b border-surface-container text-on-surface-variant">System Admin</td>
+<td class="py-4 px-6 border-b border-surface-container">
+<span class="bg-surface-variant text-on-surface px-2 py-1 rounded-md text-[10px] font-bold uppercase tracking-wider">Inactive</span>
+</td>
+<td class="py-4 px-6 border-b border-surface-container text-right">
+<button class="text-outline hover:text-primary transition-colors p-1"><span class="material-symbols-outlined text-[20px]">edit</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-4 bg-surface-container-lowest text-center">
+<button class="text-sm font-semibold text-primary hover:text-primary-container transition-colors">View All Users</button>
+</div>
+</div>
+</div>
+<!-- Right Col: Audit Trail -->
+<div class="bg-surface-container-lowest rounded-lg p-6 pt-8 pl-8 ambient-shadow border border-outline-variant/15 flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<h2 class="font-headline text-lg font-semibold text-on-surface">Security Audit Trail</h2>
+<button class="text-outline hover:text-on-surface transition-colors p-1"><span class="material-symbols-outlined text-[20px]">filter_list</span></button>
+</div>
+<div class="flex-1 relative">
+<!-- Vertical Line -->
+<div class="absolute left-4 top-2 bottom-0 w-px bg-surface-container"></div>
+<div class="space-y-6 relative">
+<!-- Event 1 -->
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest border-2 border-primary flex items-center justify-center relative z-10 shrink-0">
+<span class="material-symbols-outlined text-[16px] text-primary">key</span>
+</div>
+<div>
+<div class="text-sm font-semibold text-on-surface">Role Elevated</div>
+<div class="text-xs text-on-surface-variant mt-1 leading-relaxed">
+                                            Super Admin <span class="font-medium text-on-surface">J. Doe</span> changed role of <span class="font-medium text-on-surface">T. Smith</span> to Program Mgr.
+                                        </div>
+<div class="text-[10px] font-label uppercase tracking-widest text-outline mt-2">10 mins ago</div>
+</div>
+</div>
+<!-- Event 2 -->
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest border-2 border-secondary flex items-center justify-center relative z-10 shrink-0">
+<span class="material-symbols-outlined text-[16px] text-secondary">warning</span>
+</div>
+<div>
+<div class="text-sm font-semibold text-on-surface">Failed Login Attempt</div>
+<div class="text-xs text-on-surface-variant mt-1 leading-relaxed">
+                                            3 failed attempts detected from IP 192.168.1.45 for user <span class="font-medium text-on-surface">admin_root</span>.
+                                        </div>
+<div class="text-[10px] font-label uppercase tracking-widest text-outline mt-2">1 hour ago</div>
+</div>
+</div>
+<!-- Event 3 -->
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest border-2 border-surface-variant flex items-center justify-center relative z-10 shrink-0">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">person_add</span>
+</div>
+<div>
+<div class="text-sm font-semibold text-on-surface">New User Invited</div>
+<div class="text-xs text-on-surface-variant mt-1 leading-relaxed">
+                                            System sent invitation email to <span class="font-medium text-on-surface">new.hire@aman.org</span>.
+                                        </div>
+<div class="text-[10px] font-label uppercase tracking-widest text-outline mt-2">3 hours ago</div>
+</div>
+</div>
+<!-- Event 4 -->
+<div class="flex gap-4">
+<div class="w-8 h-8 rounded-full bg-surface-container-lowest border-2 border-surface-variant flex items-center justify-center relative z-10 shrink-0">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">settings_backup_restore</span>
+</div>
+<div>
+<div class="text-sm font-semibold text-on-surface">Password Reset</div>
+<div class="text-xs text-on-surface-variant mt-1 leading-relaxed">
+                                            User <span class="font-medium text-on-surface">maria.f</span> successfully reset password via email link.
+                                        </div>
+<div class="text-[10px] font-label uppercase tracking-widest text-outline mt-2">Yesterday, 14:30</div>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full mt-6 py-2 rounded-full border border-outline-variant/30 text-sm font-medium text-on-surface-variant hover:bg-surface-container-low transition-colors">Download Full Log</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

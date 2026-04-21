@@ -1,0 +1,390 @@
+<html class="light" lang="en"><head>
+
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Education Module - Schools</title>
+<!-- Fonts & Icons -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#f9fdff",
+                    "inverse-primary": "#5ddbbe",
+                    "surface": "#f8f9fa",
+                    "tertiary-fixed-dim": "#c1c8ca",
+                    "surface-tint": "#006b59",
+                    "primary-fixed-dim": "#5ddbbe",
+                    "surface-container": "#edeeef",
+                    "secondary-fixed": "#ffdcc6",
+                    "primary-fixed": "#7cf8da",
+                    "outline-variant": "#bccac4",
+                    "on-tertiary-fixed-variant": "#41484a",
+                    "on-primary-fixed": "#00201a",
+                    "on-primary-container": "#f4fffa",
+                    "secondary": "#964900",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed-variant": "#723600",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-container": "#5e2c00",
+                    "secondary-fixed-dim": "#ffb786",
+                    "surface-dim": "#d9dadb",
+                    "on-error-container": "#93000a",
+                    "background": "#f8f9fa",
+                    "on-background": "#191c1d",
+                    "inverse-surface": "#2e3132",
+                    "surface-variant": "#e1e3e4",
+                    "error-container": "#ffdad6",
+                    "on-secondary": "#ffffff",
+                    "tertiary-container": "#6f7678",
+                    "surface-container-low": "#f3f4f5",
+                    "on-surface-variant": "#3d4945",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#e7e8e9",
+                    "tertiary": "#565d5f",
+                    "outline": "#6d7a75",
+                    "inverse-on-surface": "#f0f1f2",
+                    "primary-container": "#00846e",
+                    "surface-bright": "#f8f9fa",
+                    "on-primary-fixed-variant": "#005143",
+                    "primary": "#006857",
+                    "tertiary-fixed": "#dde4e6",
+                    "on-tertiary-fixed": "#161d1f",
+                    "on-secondary-fixed": "#311300",
+                    "surface-container-highest": "#e1e3e4",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#fc820c",
+                    "on-surface": "#191c1d"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Inter", "sans-serif"],
+                    "body": ["Inter", "sans-serif"],
+                    "label": ["Inter", "sans-serif"]
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .icon-fill { font-variation-settings: 'FILL' 1; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface flex min-h-screen selection:bg-primary-container selection:text-on-primary-container">
+<!-- SideNavBar -->
+<nav class="bg-slate-50 dark:bg-slate-900 text-teal-800 dark:text-teal-400 font-sans tracking-tight text-sm font-medium h-screen w-64 fixed left-0 top-0 overflow-y-auto shadow-[8px_0_24px_rgba(0,0,0,0.04)] z-50 flex flex-col p-6 gap-2 border-r border-slate-100 dark:border-slate-800 hidden md:flex">
+    <!-- Brand -->
+    <div class="flex items-center gap-3 mb-8 px-2">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary-container flex items-center justify-center text-on-primary shrink-0 ambient-shadow">
+            <span class="material-symbols-outlined text-2xl icon-filled">local_library</span>
+        </div>
+        <div>
+            <h1 class="text-lg font-bold tracking-tighter text-teal-900 dark:text-teal-100 leading-tight whitespace-nowrap">Aman Foundation</h1>
+            <p class="text-xs text-on-surface-variant whitespace-nowrap">Impact Portal</p>
+        </div>
+    </div>
+
+    <div class="flex-1 flex flex-col gap-2">
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../impact_dashboard_aman_foundation/code.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            Dashboard
+        </a>
+        <div class="group flex flex-col gap-1">
+            <a class="flex items-center gap-3 px-4 py-3 bg-teal-700 text-white rounded-full shadow-lg shadow-teal-900/20 transition-all duration-300 ease-in-out" href="../education_management_hub/code.html">
+                <span class="material-symbols-outlined">school</span>
+                Education
+            </a>
+            <div class="ml-8 mt-1 hidden group-hover:flex flex-col gap-1 border-l-2 border-primary-container pl-2 transition-all duration-300">
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_fellows_module/code.html">Fellows</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_students_module/code.html">Students</a>
+                <a class="text-xs font-semibold px-3 py-2 text-primary bg-primary-container/10 rounded-full" href="../education_schools_module/code.html">Schools</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_pta_programs/code.html">PTA and Programs</a>
+            </div>
+        </div>
+        <div class="group flex flex-col gap-1">
+            <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../livelihood_management_hub/code.html">
+                <span class="material-symbols-outlined">agriculture</span>
+                Livelihood
+            </a>
+            <div class="ml-8 mt-1 hidden group-hover:flex flex-col gap-1 border-l-2 border-primary-container pl-2 transition-all duration-300">
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../livelihood_goat_rearing_1/code.html">Goat Rearing</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../livelihood_sugarcane_cultivation/code.html">Sugarcane Cultivation</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../beneficiary_master_profile/code.html">Beneficiaries</a>
+            </div>
+        </div>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../disaster_relief_management/code.html">
+            <span class="material-symbols-outlined">emergency</span>
+            Disaster Relief
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../hr_employee_management/code.html">
+            <span class="material-symbols-outlined">group</span>
+            HR Management
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../admin_access_control/code.html">
+            <span class="material-symbols-outlined">admin_panel_settings</span>
+            Admin &amp; Access
+        </a>
+    </div>
+    <div class="mt-auto border-t border-slate-100 pt-4 flex flex-col gap-2">
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-full transition-all" href="#">
+            <span class="material-symbols-outlined">help</span>
+            Help
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-full transition-all" href="#">
+            <span class="material-symbols-outlined">logout</span>
+            Logout
+        </a>
+    </div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="flex-1 ml-0 md:ml-64 flex flex-col h-screen overflow-y-auto bg-surface">
+<!-- TopNavBar (Responsive & Web Header) -->
+<!-- TopAppBar -->
+<header class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md text-teal-700 dark:text-teal-400 font-sans text-sm tracking-wide uppercase font-semibold sticky top-0 z-40 w-full flex justify-between items-center h-16 px-8 scale-95 active:scale-90 transition-transform">
+    <div class="flex items-center gap-4">
+        <span class="text-xl font-black text-slate-900 dark:text-white normal-case tracking-normal">Impact Portal</span>
+    </div>
+    <div class="flex items-center gap-4">
+        <div class="flex gap-2">
+            <button class="text-slate-500 hover:text-teal-600 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full p-2 flex items-center justify-center">
+                <span class="material-symbols-outlined">notifications</span>
+            </button>
+            <button class="text-slate-500 hover:text-teal-600 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full p-2 flex items-center justify-center">
+                <span class="material-symbols-outlined">settings</span>
+            </button>
+        </div>
+        <div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+            <img alt="User profile avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy0YC_TGbMxUogj7u6FlVKznrRAyySoM1Wk5t86itV9-_WFTvj8S0Yzjr9GbBo8Bfm5nmRm_UZNvqkNLAOwajxpIHTPsvU3uWB_8oQCTDeLlTy5FFvFEdJbGbOLV8T87s7JItDrrR2LELtEkIRHVgt-MZ4wCsnMNliGHkwJgzEzPmZLJ3RyksBBrHyBQUOrsN9TswbWGEUCWg7Kct8wDcojEkOb4jbZtq_alD8mtnNZfS9PFgwiRKdk4k-6T8WSccDJBrvSEgUpobq"/>
+        </div>
+    </div>
+</header>
+<!-- Page Canvas -->
+<div class="p-6 lg:p-10 flex flex-col gap-10 max-w-[1600px] mx-auto w-full">
+<!-- Editorial Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<h2 class="font-headline text-[2.75rem] leading-none tracking-[-0.02em] text-on-surface mb-3">Education Module</h2>
+<p class="font-body text-lg text-on-surface-variant max-w-2xl">Monitoring school profiles, program participation, and geographic impact across targeted regions.</p>
+</div>
+<div class="flex gap-3">
+<button class="px-5 py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface font-label text-sm uppercase tracking-widest flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">download</span> Export Data
+                    </button>
+<button class="px-5 py-2.5 rounded-full bg-primary text-on-primary hover:opacity-90 transition-opacity font-label text-sm uppercase tracking-widest flex items-center gap-2 shadow-[0_8px_24px_-10px_rgba(0,104,87,0.4)]">
+<span class="material-symbols-outlined text-[18px]">add</span> Add School
+                    </button>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-6">
+<!-- Map View (Hero Card) -->
+<div class="xl:col-span-8 bg-surface-container-low rounded-[1rem] relative overflow-hidden h-[500px] flex group">
+<img alt="Geographic mapping of schools" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-in-out" data-alt="satellite view map showing urban layout with subtle overlaid data points and glowing markers in teal and green" data-location="Regional Map" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhgWm2vbsWbyDUbD4mgsvy1AZrwUyaiSKySgBqDHHlYkuLQwP-vjNxO27FlcDq4xFb_i7bwUmlloXU3F1Ap--g8q8PUL4Mj9e9hiR3WG80ydnAUMQsc_qxkQfGSO972p9-bEXnAjs_4VE08f6AZ3NY1XyUJ4GBG1GjcSfHzAS6ZOyR4MlYzQAnkAEPLdjNmFGDt2uKxIyztLZVPJepz6xt_K_oPjuInIri-dGYQB8FF-GH1KrrO_74MMPX4I5S8WHSniXDxxpbP2ZO"/>
+<!-- Glassmorphism Stats Overlay -->
+<div class="absolute bottom-6 left-6 right-6 md:right-auto md:w-[340px] bg-surface-container-lowest/85 backdrop-blur-[12px] p-6 rounded-[1rem] shadow-[0_8px_24px_-10px_rgba(0,104,87,0.08)]">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-headline text-lg text-on-surface tracking-tight">Regional Impact</h3>
+<span class="material-symbols-outlined text-primary">public</span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<p class="font-label text-[0.65rem] uppercase tracking-[0.05em] text-on-surface-variant mb-1">Total Schools</p>
+<p class="font-headline text-2xl text-on-surface">124</p>
+</div>
+<div>
+<p class="font-label text-[0.65rem] uppercase tracking-[0.05em] text-on-surface-variant mb-1">Active Students</p>
+<p class="font-headline text-2xl text-primary">45.2k</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Aggregated Metrics Side Panel -->
+<div class="xl:col-span-4 flex flex-col gap-6">
+<!-- Primary Metric Card -->
+<div class="bg-primary-container p-8 rounded-[1rem] flex flex-col justify-between h-full relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"></div>
+<div>
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-on-primary-container">trending_up</span>
+<h3 class="font-label text-xs uppercase tracking-[0.05em] text-on-primary-container/80">Overall Impact Score</h3>
+</div>
+<div class="flex items-baseline gap-2">
+<p class="font-headline text-5xl tracking-[-0.02em] text-on-primary-container">87</p>
+<p class="font-body text-sm text-on-primary-container/80">/ 100</p>
+</div>
+</div>
+<div class="mt-8 space-y-4 relative z-10">
+<div>
+<div class="flex justify-between text-sm mb-1 text-on-primary-container">
+<span>Program Attendance</span>
+<span class="font-medium">92%</span>
+</div>
+<div class="h-1.5 w-full bg-on-primary-container/20 rounded-full overflow-hidden">
+<div class="h-full bg-on-primary-container w-[92%] rounded-full shadow-[0_0_8px_rgba(255,255,255,0.5)]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-sm mb-1 text-on-primary-container">
+<span>Resource Allocation</span>
+<span class="font-medium">78%</span>
+</div>
+<div class="h-1.5 w-full bg-on-primary-container/20 rounded-full overflow-hidden">
+<div class="h-full bg-on-primary-container w-[78%] rounded-full"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Alert/Action Card -->
+<div class="bg-surface-container-low p-6 rounded-[1rem]">
+<h3 class="font-label text-xs uppercase tracking-[0.05em] text-on-surface-variant mb-4">Needs Attention</h3>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary text-[20px]">warning</span>
+</div>
+<div>
+<p class="font-body text-sm text-on-surface font-medium">3 Schools require immediate resource restocking.</p>
+<a class="font-label text-xs uppercase tracking-widest text-primary mt-2 inline-block hover:underline" href="#">Review Inventory</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- School Profile Cards Section -->
+<div class="mt-4">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-headline text-2xl tracking-tight text-on-surface">Featured Profiles</h3>
+<button class="text-primary font-label text-sm uppercase tracking-widest hover:underline flex items-center gap-1">
+                        View All Directory <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-[1rem] hover:shadow-[0_8px_24px_-10px_rgba(0,104,87,0.08)] transition-all duration-300 flex flex-col group cursor-pointer">
+<div class="flex items-start justify-between mb-6">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container overflow-hidden shrink-0">
+<img alt="School building" class="w-full h-full object-cover" data-alt="front entrance of a modern school building with red brick and large windows on a sunny day" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAd0x1ztc9iuj8nay2xC1_MH-xTSmAKr8IhFrASNZRkSKkt-Y4BunC5I9iqvTLQ0_8lmU0zaYnPjqddtwFcC75fjZRBUU-N_7DG60EY9HluYt_nZMGUi1MCuGMs9ZtR2iM2AGFyw2MvZhg-RlW1as3xPOOXef7qU9OwfisCQeoCv_6chJeBZbBMdmknEG_LLtMl_EWluwSEWTOAEkWm2p31lCjaolK7bQHfqtZzT6CLsbLoare9Nu918oPHFj07H0LgIShvW4giB6YL"/>
+</div>
+<div>
+<h4 class="font-headline text-lg text-on-surface leading-tight group-hover:text-primary transition-colors">Oakridge Academy</h4>
+<p class="font-body text-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> North District
+                                    </p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label text-[0.65rem] uppercase tracking-widest">Active</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6 pt-4 border-t border-surface-variant">
+<div>
+<p class="font-label text-[0.65rem] uppercase tracking-[0.05em] text-on-surface-variant mb-1">Enrolled</p>
+<p class="font-headline text-xl text-on-surface">1,240</p>
+</div>
+<div>
+<p class="font-label text-[0.65rem] uppercase tracking-[0.05em] text-on-surface-variant mb-1">Programs</p>
+<p class="font-headline text-xl text-on-surface">4</p>
+</div>
+</div>
+<div class="mt-auto">
+<div class="flex justify-between font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2">
+<span>Impact Goal</span>
+<span class="text-primary">85%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[85%] rounded-full shadow-[0_0_4px_rgba(0,104,87,0.4)]"></div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-[1rem] hover:shadow-[0_8px_24px_-10px_rgba(0,104,87,0.08)] transition-all duration-300 flex flex-col group cursor-pointer">
+<div class="flex items-start justify-between mb-6">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container overflow-hidden shrink-0">
+<img alt="School classroom" class="w-full h-full object-cover" data-alt="bright classroom with empty wooden desks and a chalkboard in the background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz5AwPFuwFIR2gamqHGmS3Z3IdTDQwW83VVeH6b9NJQeyhwstun166F-NBJdmvRxVedIL-KvP2kSfrxII7pBp79OmeBVj_J6PnuiUawZodfc0uJXAvWrakkcwnw4Hqf3XMp1L_FWf3gbWbnqajq_B2L9R61bXpsmng6PGHQ1DhYHPRtNj0FIVW9oXuywykoMFb8kYgru_HD_DkySGwo1b-jcWzvibQ5MZ6R3bzcPgSiBKeu0Rk1ETZRc61Hdu6z3xj1KNhL2dgFdP5"/>
+</div>
+<div>
+<h4 class="font-headline text-lg text-on-surface leading-tight group-hover:text-primary transition-colors">Riverside Public</h4>
+<p class="font-body text-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> East Valley
+                                    </p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label text-[0.65rem] uppercase tracking-widest">Review</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6 pt-4 border-t border-surface-variant">
+<div>
+<p class="font-label text-[0.65rem] uppercase tracking-[0.05em] text-on-surface-variant mb-1">Enrolled</p>
+<p class="font-headline text-xl text-on-surface">850</p>
+</div>
+<div>
+<p class="font-label text-[0.65rem] uppercase tracking-[0.05em] text-on-surface-variant mb-1">Programs</p>
+<p class="font-headline text-xl text-on-surface">2</p>
+</div>
+</div>
+<div class="mt-auto">
+<div class="flex justify-between font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2">
+<span>Impact Goal</span>
+<span class="text-secondary">42%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-[42%] rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-[1rem] hover:shadow-[0_8px_24px_-10px_rgba(0,104,87,0.08)] transition-all duration-300 flex flex-col group cursor-pointer">
+<div class="flex items-start justify-between mb-6">
+<div class="flex gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container overflow-hidden shrink-0">
+<img alt="Students on campus" class="w-full h-full object-cover" data-alt="group of university students walking across a lush green campus quad on a bright day" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3JsQ8gLDGjXcAskdAgUZD_gbTWPDpCHJ32DnFoopdp-_p5I_tgEYtvw4dOCafH7MyasL1dS3wak_92AIaWlwMwG3sj4MjB1WuLlaXIrD_Pgmeuj-7QDOpOBBGV61QzLmn-ToK-R2LhxD-uDv5RiRqzcVeF6dzd8NDuP0UxUs4_6vkZrksOHYi1xW4AxQWl2kD1120kSJ72va_hR5sAs4V-2ir50bTZl6Oc9Rb9HATjyWanXkUOJDd6GDhhJaAsICMPa-8RFXRUFJx"/>
+</div>
+<div>
+<h4 class="font-headline text-lg text-on-surface leading-tight group-hover:text-primary transition-colors">Summit Prep</h4>
+<p class="font-body text-sm text-on-surface-variant flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-[14px]">location_on</span> West Highlands
+                                    </p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label text-[0.65rem] uppercase tracking-widest">Active</span>
+</div>
+<div class="grid grid-cols-2 gap-4 mb-6 pt-4 border-t border-surface-variant">
+<div>
+<p class="font-label text-[0.65rem] uppercase tracking-[0.05em] text-on-surface-variant mb-1">Enrolled</p>
+<p class="font-headline text-xl text-on-surface">2,100</p>
+</div>
+<div>
+<p class="font-label text-[0.65rem] uppercase tracking-[0.05em] text-on-surface-variant mb-1">Programs</p>
+<p class="font-headline text-xl text-on-surface">7</p>
+</div>
+</div>
+<div class="mt-auto">
+<div class="flex justify-between font-label text-xs uppercase tracking-widest text-on-surface-variant mb-2">
+<span>Impact Goal</span>
+<span class="text-primary">94%</span>
+</div>
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[94%] rounded-full shadow-[0_0_4px_rgba(0,104,87,0.4)]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

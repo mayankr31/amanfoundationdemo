@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Impact OS - Education Module: PTA &amp; Programs</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-container": "#f9fdff",
+                        "inverse-primary": "#5ddbbe",
+                        "surface": "#f8f9fa",
+                        "tertiary-fixed-dim": "#c1c8ca",
+                        "surface-tint": "#006b59",
+                        "primary-fixed-dim": "#5ddbbe",
+                        "surface-container": "#edeeef",
+                        "secondary-fixed": "#ffdcc6",
+                        "primary-fixed": "#7cf8da",
+                        "outline-variant": "#bccac4",
+                        "on-tertiary-fixed-variant": "#41484a",
+                        "on-primary-fixed": "#00201a",
+                        "on-primary-container": "#f4fffa",
+                        "secondary": "#964900",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#723600",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-container": "#5e2c00",
+                        "secondary-fixed-dim": "#ffb786",
+                        "surface-dim": "#d9dadb",
+                        "on-error-container": "#93000a",
+                        "background": "#f8f9fa",
+                        "on-background": "#191c1d",
+                        "inverse-surface": "#2e3132",
+                        "surface-variant": "#e1e3e4",
+                        "error-container": "#ffdad6",
+                        "on-secondary": "#ffffff",
+                        "tertiary-container": "#6f7678",
+                        "surface-container-low": "#f3f4f5",
+                        "on-surface-variant": "#3d4945",
+                        "on-error": "#ffffff",
+                        "surface-container-high": "#e7e8e9",
+                        "tertiary": "#565d5f",
+                        "outline": "#6d7a75",
+                        "inverse-on-surface": "#f0f1f2",
+                        "primary-container": "#00846e",
+                        "surface-bright": "#f8f9fa",
+                        "on-primary-fixed-variant": "#005143",
+                        "primary": "#006857",
+                        "tertiary-fixed": "#dde4e6",
+                        "on-tertiary-fixed": "#161d1f",
+                        "on-secondary-fixed": "#311300",
+                        "surface-container-highest": "#e1e3e4",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#fc820c",
+                        "on-surface": "#191c1d"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "1rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined { font-family: 'Material Symbols Outlined'; }
+        .text-display-md { font-size: 2.75rem; line-height: 1.2; letter-spacing: -0.02em; }
+        .text-label-md { font-size: 0.75rem; line-height: 1.33; letter-spacing: 0.05em; text-transform: uppercase; }
+        .text-body-md { font-size: 0.875rem; line-height: 1.5; }
+        .ambient-shadow { box-shadow: 0 8px 24px rgba(25, 28, 29, 0.04); }
+        .impact-gradient { background: linear-gradient(135deg, #006857 0%, #00846e 100%); }
+        .glass-panel { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased flex h-screen overflow-hidden">
+<!-- SideNavBar -->
+<nav class="bg-slate-50 dark:bg-slate-900 text-teal-800 dark:text-teal-400 font-sans tracking-tight text-sm font-medium h-screen w-64 fixed left-0 top-0 overflow-y-auto shadow-[8px_0_24px_rgba(0,0,0,0.04)] z-50 flex flex-col p-6 gap-2 border-r border-slate-100 dark:border-slate-800 hidden md:flex">
+    <!-- Brand -->
+    <div class="flex items-center gap-3 mb-8 px-2">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary-container flex items-center justify-center text-on-primary shrink-0 ambient-shadow">
+            <span class="material-symbols-outlined text-2xl icon-filled">local_library</span>
+        </div>
+        <div>
+            <h1 class="text-lg font-bold tracking-tighter text-teal-900 dark:text-teal-100 leading-tight whitespace-nowrap">Aman Foundation</h1>
+            <p class="text-xs text-on-surface-variant whitespace-nowrap">Impact Portal</p>
+        </div>
+    </div>
+
+    <div class="flex-1 flex flex-col gap-2">
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../impact_dashboard_aman_foundation/code.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            Dashboard
+        </a>
+        <div class="group flex flex-col gap-1">
+            <a class="flex items-center gap-3 px-4 py-3 bg-teal-700 text-white rounded-full shadow-lg shadow-teal-900/20 transition-all duration-300 ease-in-out" href="../education_management_hub/code.html">
+                <span class="material-symbols-outlined">school</span>
+                Education
+            </a>
+            <div class="ml-8 mt-1 hidden group-hover:flex flex-col gap-1 border-l-2 border-primary-container pl-2 transition-all duration-300">
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_fellows_module/code.html">Fellows</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_students_module/code.html">Students</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_schools_module/code.html">Schools</a>
+                <a class="text-xs font-semibold px-3 py-2 text-primary bg-primary-container/10 rounded-full" href="../education_pta_programs/code.html">PTA and Programs</a>
+            </div>
+        </div>
+        <div class="group flex flex-col gap-1">
+            <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../livelihood_management_hub/code.html">
+                <span class="material-symbols-outlined">agriculture</span>
+                Livelihood
+            </a>
+            <div class="ml-8 mt-1 hidden group-hover:flex flex-col gap-1 border-l-2 border-primary-container pl-2 transition-all duration-300">
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../livelihood_goat_rearing_1/code.html">Goat Rearing</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../livelihood_sugarcane_cultivation/code.html">Sugarcane Cultivation</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../beneficiary_master_profile/code.html">Beneficiaries</a>
+            </div>
+        </div>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../disaster_relief_management/code.html">
+            <span class="material-symbols-outlined">emergency</span>
+            Disaster Relief
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../hr_employee_management/code.html">
+            <span class="material-symbols-outlined">group</span>
+            HR Management
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../admin_access_control/code.html">
+            <span class="material-symbols-outlined">admin_panel_settings</span>
+            Admin &amp; Access
+        </a>
+    </div>
+    <div class="mt-auto border-t border-slate-100 pt-4 flex flex-col gap-2">
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-full transition-all" href="#">
+            <span class="material-symbols-outlined">help</span>
+            Help
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-full transition-all" href="#">
+            <span class="material-symbols-outlined">logout</span>
+            Logout
+        </a>
+    </div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 ml-0 md:ml-64 flex flex-col h-screen overflow-hidden bg-surface relative">
+<!-- TopNavBar (Mobile only for Nav, but acts as header here for tools) -->
+<!-- TopAppBar -->
+<header class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md text-teal-700 dark:text-teal-400 font-sans text-sm tracking-wide uppercase font-semibold sticky top-0 z-40 w-full flex justify-between items-center h-16 px-8 scale-95 active:scale-90 transition-transform">
+    <div class="flex items-center gap-4">
+        <span class="text-xl font-black text-slate-900 dark:text-white normal-case tracking-normal">Impact Portal</span>
+    </div>
+    <div class="flex items-center gap-4">
+        <div class="flex gap-2">
+            <button class="text-slate-500 hover:text-teal-600 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full p-2 flex items-center justify-center">
+                <span class="material-symbols-outlined">notifications</span>
+            </button>
+            <button class="text-slate-500 hover:text-teal-600 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full p-2 flex items-center justify-center">
+                <span class="material-symbols-outlined">settings</span>
+            </button>
+        </div>
+        <div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+            <img alt="User profile avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCy0YC_TGbMxUogj7u6FlVKznrRAyySoM1Wk5t86itV9-_WFTvj8S0Yzjr9GbBo8Bfm5nmRm_UZNvqkNLAOwajxpIHTPsvU3uWB_8oQCTDeLlTy5FFvFEdJbGbOLV8T87s7JItDrrR2LELtEkIRHVgt-MZ4wCsnMNliGHkwJgzEzPmZLJ3RyksBBrHyBQUOrsN9TswbWGEUCWg7Kct8wDcojEkOb4jbZtq_alD8mtnNZfS9PFgwiRKdk4k-6T8WSccDJBrvSEgUpobq"/>
+        </div>
+    </div>
+</header>
+<!-- Canvas Header (Desktop) -->
+<div class="hidden md:flex justify-between items-end px-12 pt-12 pb-6 z-10 relative">
+<div>
+<h2 class="text-label-md text-on-surface-variant mb-2">Education Module</h2>
+<h1 class="text-display-md font-headline font-semibold text-on-background">PTA &amp; Programs</h1>
+</div>
+<div class="flex gap-3">
+<button class="bg-surface-container-lowest text-on-surface border border-outline-variant/30 px-6 py-2.5 rounded-full text-sm font-medium hover:bg-surface-container-low transition-colors ambient-shadow flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+                    Calendar View
+                </button>
+<button class="impact-gradient text-on-primary px-6 py-2.5 rounded-full text-sm font-medium hover:opacity-90 transition-opacity shadow-[0_4px_12px_rgba(0,104,87,0.2)] flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                    New Program
+                </button>
+</div>
+</div>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto px-6 md:px-12 pb-24 md:pb-12 custom-scrollbar">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 max-w-7xl mx-auto">
+<!-- Left Column: Bento Grid of Metrics & Upcoming -->
+<div class="lg:col-span-8 flex flex-col gap-8">
+<!-- Metrics Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Metric Card 1 -->
+<div class="bg-surface-container-lowest rounded-lg p-6 pt-8 pl-8 ambient-shadow relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10">
+<span class="material-symbols-outlined text-[64px]">groups</span>
+</div>
+<p class="text-label-md text-on-surface-variant mb-2">Active Parent Involvement</p>
+<div class="flex items-baseline gap-2">
+<span class="text-4xl font-headline font-bold tracking-tight text-on-surface">78%</span>
+<span class="text-sm font-medium text-primary flex items-center"><span class="material-symbols-outlined text-[16px]">arrow_upward</span> 4%</span>
+</div>
+<div class="mt-4 h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary rounded-full relative" style="width: 78%;">
+<div class="absolute right-0 top-0 bottom-0 w-2 bg-white/30 blur-[1px]"></div>
+</div>
+</div>
+</div>
+<!-- Metric Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg p-6 pt-8 pl-8 ambient-shadow relative overflow-hidden">
+<p class="text-label-md text-on-surface-variant mb-2">Programs Scheduled</p>
+<div class="text-4xl font-headline font-bold tracking-tight text-on-surface">12</div>
+<p class="text-xs text-on-surface-variant mt-2">This Trimester</p>
+</div>
+<!-- Metric Card 3 -->
+<div class="bg-surface-container-lowest rounded-lg p-6 pt-8 pl-8 ambient-shadow relative overflow-hidden">
+<p class="text-label-md text-on-surface-variant mb-2">Communication Rate</p>
+<div class="text-4xl font-headline font-bold tracking-tight text-on-surface">92%</div>
+<p class="text-xs text-on-surface-variant mt-2">Follow-ups completed</p>
+</div>
+</div>
+<!-- Upcoming Programs List -->
+<div class="bg-surface-container-lowest rounded-lg ambient-shadow flex flex-col h-full min-h-[400px]">
+<div class="p-8 pb-4 flex justify-between items-center border-b border-surface-container-low/0">
+<h3 class="text-lg font-headline font-semibold text-on-surface">Upcoming Programs &amp; Meetings</h3>
+<button class="text-sm font-medium text-primary hover:text-primary-container transition-colors">View All</button>
+</div>
+<div class="flex-1 p-4 pt-0">
+<!-- List Item 1 -->
+<div class="p-4 bg-surface rounded-lg mb-4 flex items-start gap-4 transition-colors hover:bg-surface-container-low group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined" data-icon="campaign">campaign</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-semibold text-on-surface text-base">Annual Literacy Drive Launch</h4>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-primary-fixed text-on-primary-fixed uppercase tracking-wider">Scheduled</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-3 line-clamp-1">Kickoff meeting with community leaders and volunteer parents.</p>
+<div class="flex items-center gap-4 text-xs text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+                                            Oct 24, 2023 • 10:00 AM
+                                        </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+                                            Main Hall
+                                        </div>
+</div>
+</div>
+</div>
+<!-- List Item 2 -->
+<div class="p-4 bg-surface rounded-lg mb-4 flex items-start gap-4 transition-colors hover:bg-surface-container-low group cursor-pointer">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-on-secondary-container flex-shrink-0">
+<span class="material-symbols-outlined" data-icon="diversity_3">diversity_3</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-semibold text-on-surface text-base">PTA General Assembly</h4>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-[10px] font-medium bg-secondary-container text-on-secondary-fixed uppercase tracking-wider">High Priority</span>
+</div>
+<p class="text-body-md text-on-surface-variant mb-3 line-clamp-1">Quarterly review of academic outcomes and facility improvements.</p>
+<div class="flex items-center gap-4 text-xs text-on-surface-variant">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">calendar_today</span>
+                                            Nov 02, 2023 • 18:00 PM
+                                        </div>
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[14px]">group</span>
+                                            120 Expected
+                                        </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Contextual Action & Logs -->
+<div class="lg:col-span-4 flex flex-col gap-8">
+<!-- Action Card (Glassmorphism inspired) -->
+<div class="bg-surface-container rounded-lg p-1 relative overflow-hidden ambient-shadow">
+<div class="absolute inset-0 bg-cover bg-center opacity-20" data-alt="Abstract soft focus image of a school environment with warm lighting" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAXFcawSY663IGZfElcvz4I6ForxVha8tbGLkUZBoqLXGFUWBGej1w_N9yxF_-_SHQYWtGJYnXBgpewFFvSRk_7XjomsGGdbc7ESgk6mv5cXcqv6SNchMcGioAo0inl--8i918PQb-YegjqFNyyrS6R4W-q1zdLqDr1OSJe1KLGCmYBmZtkFHn3TKQ-4h9tOCxTCJFeKDFAzpO1On-CTCTL6yacXIr05NxuXdnIG2ZGMjIBXMiaFzMBG--UmG-IlhhGwP9-AoZjtg1j')"></div>
+<div class="glass-panel p-8 rounded-lg relative z-10 h-full flex flex-col justify-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary mx-auto mb-4">
+<span class="material-symbols-outlined text-[32px]">mark_email_unread</span>
+</div>
+<h3 class="text-lg font-headline font-semibold text-on-surface mb-2">Pending Follow-ups</h3>
+<p class="text-body-md text-on-surface-variant mb-6">You have 4 communications requiring attention from the last PTA meeting.</p>
+<button class="w-full bg-surface-container-lowest text-on-surface border border-outline-variant/30 px-6 py-3 rounded-full text-sm font-medium hover:bg-surface-container-low transition-colors">
+                                Review Logs
+                            </button>
+</div>
+</div>
+<!-- Communication Log Snapshot -->
+<div class="bg-surface-container-lowest rounded-lg p-6 pt-8 pl-8 ambient-shadow flex-1">
+<h3 class="text-label-md text-on-surface-variant mb-6">Recent Communications</h3>
+<div class="relative pl-4 border-l-2 border-surface-container-high space-y-6">
+<!-- Log Item 1 -->
+<div class="relative">
+<div class="absolute -left-[21px] top-1 w-2.5 h-2.5 rounded-full bg-primary border-2 border-surface-container-lowest"></div>
+<div class="flex justify-between items-baseline mb-1">
+<span class="text-sm font-semibold text-on-surface">Email Sent</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-wider">Today, 09:41 AM</span>
+</div>
+<p class="text-xs text-on-surface-variant mb-1">To: Grade 4 Parent Cohort</p>
+<p class="text-sm text-on-surface bg-surface p-3 rounded-md mt-2 line-clamp-2">Reminder regarding the upcoming field trip volunteer requirements. Please ensure forms are submitted.</p>
+</div>
+<!-- Log Item 2 -->
+<div class="relative">
+<div class="absolute -left-[21px] top-1 w-2.5 h-2.5 rounded-full bg-surface-variant border-2 border-surface-container-lowest"></div>
+<div class="flex justify-between items-baseline mb-1">
+<span class="text-sm font-semibold text-on-surface">Meeting Notes Logged</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-wider">Yesterday</span>
+</div>
+<p class="text-xs text-on-surface-variant">Re: Facility Maintenance Committee</p>
+</div>
+<!-- Log Item 3 -->
+<div class="relative">
+<div class="absolute -left-[21px] top-1 w-2.5 h-2.5 rounded-full bg-secondary border-2 border-surface-container-lowest"></div>
+<div class="flex justify-between items-baseline mb-1">
+<span class="text-sm font-semibold text-on-surface">Missed Call</span>
+<span class="text-[10px] text-on-surface-variant uppercase tracking-wider">Oct 18</span>
+</div>
+<p class="text-xs text-on-surface-variant">From: Sarah Jenkins (PTA President)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<style>
+        /* Custom scrollbar for webkit to maintain clean aesthetic */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent; 
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(109, 122, 117, 0.2); 
+            border-radius: 10px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(109, 122, 117, 0.4); 
+        }
+    </style>
+</body></html>

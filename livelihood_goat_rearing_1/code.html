@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Goat Rearing Distribution &amp; Health - Aman Foundation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "on-primary-fixed": "#00201a",
+                        "on-tertiary-fixed": "#161d1f",
+                        "on-surface": "#191c1d",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f8f9fa",
+                        "tertiary": "#565d5f",
+                        "surface-container-high": "#e7e8e9",
+                        "surface-tint": "#006b59",
+                        "secondary-container": "#fc820c",
+                        "surface-variant": "#e1e3e4",
+                        "surface-dim": "#d9dadb",
+                        "primary-container": "#00846e",
+                        "outline": "#6d7a75",
+                        "tertiary-fixed": "#dde4e6",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f3f4f5",
+                        "on-secondary-fixed-variant": "#723600",
+                        "surface-container": "#edeeef",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-primary-fixed-variant": "#005143",
+                        "secondary-fixed-dim": "#ffb786",
+                        "on-tertiary-container": "#f9fdff",
+                        "secondary-fixed": "#ffdcc6",
+                        "outline-variant": "#bccac4",
+                        "on-secondary-fixed": "#311300",
+                        "inverse-on-surface": "#f0f1f2",
+                        "background": "#f8f9fa",
+                        "on-tertiary-fixed-variant": "#41484a",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#191c1d",
+                        "on-surface-variant": "#3d4945",
+                        "on-secondary-container": "#5e2c00",
+                        "tertiary-container": "#6f7678",
+                        "on-primary-container": "#f4fffa",
+                        "tertiary-fixed-dim": "#c1c8ca",
+                        "error": "#ba1a1a",
+                        "inverse-surface": "#2e3132",
+                        "primary-fixed": "#7cf8da",
+                        "surface-bright": "#f8f9fa",
+                        "secondary": "#964900",
+                        "inverse-primary": "#5ddbbe",
+                        "primary": "#006857",
+                        "primary-fixed-dim": "#5ddbbe"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "1rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Inter", "sans-serif"],
+                        "body": ["Inter", "sans-serif"],
+                        "label": ["Inter", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .ambient-shadow { box-shadow: 0 8px 24px rgba(25, 28, 29, 0.04); }
+        .glass-panel { backdrop-filter: blur(12px); }
+        .gradient-primary { background: linear-gradient(135deg, #006857 0%, #00846e 100%); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="bg-slate-50 dark:bg-slate-900 text-teal-800 dark:text-teal-400 font-sans tracking-tight text-sm font-medium h-screen w-64 fixed left-0 top-0 overflow-y-auto shadow-[8px_0_24px_rgba(0,0,0,0.04)] z-50 flex flex-col p-6 gap-2 border-r border-slate-100 dark:border-slate-800 hidden md:flex">
+    <!-- Brand -->
+    <div class="flex items-center gap-3 mb-8 px-2">
+        <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-primary-container flex items-center justify-center text-on-primary shrink-0 ambient-shadow">
+            <span class="material-symbols-outlined text-2xl icon-filled">local_library</span>
+        </div>
+        <div>
+            <h1 class="text-lg font-bold tracking-tighter text-teal-900 dark:text-teal-100 leading-tight whitespace-nowrap">Aman Foundation</h1>
+            <p class="text-xs text-on-surface-variant whitespace-nowrap">Impact Portal</p>
+        </div>
+    </div>
+<div class="flex-1 flex flex-col gap-2">
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../impact_dashboard_aman_foundation/code.html">
+            <span class="material-symbols-outlined">dashboard</span>
+            Dashboard
+        </a>
+        <div class="group flex flex-col gap-1">
+            <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../education_management_hub/code.html">
+                <span class="material-symbols-outlined">school</span>
+                Education
+            </a>
+            <div class="ml-8 mt-1 hidden group-hover:flex flex-col gap-1 border-l-2 border-primary-container pl-2 transition-all duration-300">
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_fellows_module/code.html">Fellows</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_students_module/code.html">Students</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_schools_module/code.html">Schools</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_pta_programs/code.html">PTA and Programs</a>
+            </div>
+        </div>
+        <div class="group flex flex-col gap-1">
+            <a class="flex items-center gap-3 px-4 py-3 bg-teal-700 text-white rounded-full shadow-lg shadow-teal-900/20 transition-all duration-300 ease-in-out" href="../livelihood_management_hub/code.html">
+                <span class="material-symbols-outlined">agriculture</span>
+                Livelihood
+            </a>
+            <div class="ml-8 mt-1 hidden group-hover:flex flex-col gap-1 border-l-2 border-primary-container pl-2 transition-all duration-300">
+                <a class="text-xs font-semibold px-3 py-2 text-primary bg-primary-container/10 rounded-full" href="../livelihood_goat_rearing_1/code.html">Goat Rearing</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../livelihood_sugarcane_cultivation/code.html">Sugarcane Cultivation</a>
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../beneficiary_master_profile/code.html">Beneficiaries</a>
+            </div>
+        </div>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../disaster_relief_management/code.html">
+            <span class="material-symbols-outlined">emergency</span>
+            Disaster Relief
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../hr_employee_management/code.html">
+            <span class="material-symbols-outlined">group</span>
+            HR Management
+        </a>
+        <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../admin_access_control/code.html">
+            <span class="material-symbols-outlined">admin_panel_settings</span>
+            Admin &amp; Access
+        </a>
+</div>
+<div class="mt-auto border-t border-slate-100 pt-4 flex flex-col gap-2">
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">help</span>
+                Help
+            </a>
+<a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 rounded-full transition-all" href="#">
+<span class="material-symbols-outlined">logout</span>
+                Logout
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 ml-0 md:ml-64 flex flex-col min-h-screen">
+<!-- TopAppBar -->
+<header class="bg-white/85 dark:bg-slate-950/85 backdrop-blur-md text-teal-700 dark:text-teal-400 font-sans text-sm tracking-wide uppercase font-semibold sticky top-0 z-40 w-full flex justify-between items-center h-16 px-8 scale-95 active:scale-90 transition-transform">
+<div class="flex items-center gap-4">
+<span class="text-xl font-black text-slate-900 dark:text-white normal-case tracking-normal">Impact Portal</span>
+</div>
+<div class="flex items-center gap-4">
+<!-- Search input would go here if needed -->
+<div class="flex gap-2">
+<button class="text-slate-500 hover:text-teal-600 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full p-2 flex items-center justify-center">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="text-slate-500 hover:text-teal-600 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full p-2 flex items-center justify-center">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</div>
+<div class="w-8 h-8 rounded-full bg-surface-container overflow-hidden">
+<img alt="User profile avatar" class="w-full h-full object-cover" data-alt="close up headshot of a smiling man in a blue shirt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGj2SJWnIcnPlUbupTtiafwcbA2AR8HQcV06FhCh_3toLQfM-CrYz9LgHT2WrIG_VUpXuxhUOHc77BD8-tkFtyIUhxiy2PmNW1NJFz0MehTa3vrNwUMKaSkDFCl8RPUhwKdI5gOhW6WdYsX7Y52CPGXwgMO63F-rwIRgeS9Yg6uW1zu1f2iSw8sAh73duXwcqlwRx1wRBZZPSySgSrLW3XuJdZRczU_t81Ok0ha4kTdZkXhGBtTkN6KsYZEZd9A3S9Gal7XdlK8Olu"/>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="p-8 flex-1 flex flex-col gap-8 max-w-7xl mx-auto w-full">
+<!-- Page Header -->
+<div class="flex justify-between items-end">
+<div>
+<h2 class="text-[2.75rem] font-headline tracking-[-0.02em] leading-tight text-on-surface mb-2">Goat Rearing Distribution &amp; Health</h2>
+<p class="text-on-surface-variant font-body text-sm max-w-2xl">Monitoring livelihood impact through livestock distribution metrics, health tracking, and return on investment for rural beneficiaries.</p>
+</div>
+<button class="gradient-primary text-on-primary px-6 py-3 rounded-full font-label text-xs uppercase tracking-[0.05em] flex items-center gap-2 hover:opacity-90 transition-opacity ambient-shadow">
+<span class="material-symbols-outlined text-sm">download</span>
+                    Export Data
+                </button>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+<!-- Metrics Column -->
+<div class="lg:col-span-4 flex flex-col gap-6">
+<!-- Metric Card 1 -->
+<div class="bg-surface-container-lowest rounded-lg p-6 pt-8 pl-8 ambient-shadow relative overflow-hidden group">
+<div class="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-bl-full -mr-16 -mt-16 transition-transform group-hover:scale-110"></div>
+<span class="font-label text-xs uppercase tracking-[0.05em] text-on-surface-variant mb-4 block">Total Beneficiaries</span>
+<div class="flex items-baseline gap-3">
+<span class="text-4xl font-headline font-bold text-primary">1,248</span>
+<span class="text-sm font-medium text-primary-fixed-dim bg-primary-fixed/20 px-2 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px]">trending_up</span> +12%
+                            </span>
+</div>
+<p class="text-xs text-on-surface-variant mt-4 pt-4 border-t border-surface-container">Across 32 active villages</p>
+</div>
+<!-- Metric Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg p-6 pt-8 pl-8 ambient-shadow">
+<span class="font-label text-xs uppercase tracking-[0.05em] text-on-surface-variant mb-4 block">Active Livestock</span>
+<div class="flex items-baseline gap-3">
+<span class="text-4xl font-headline font-bold text-on-surface">3,740</span>
+</div>
+<div class="mt-4 flex flex-col gap-2">
+<div class="flex justify-between text-xs">
+<span class="text-on-surface-variant">Adults</span>
+<span class="font-medium text-on-surface">2,100</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-primary h-1.5 rounded-full" style="width: 60%"></div>
+</div>
+<div class="flex justify-between text-xs mt-2">
+<span class="text-on-surface-variant">Kids</span>
+<span class="font-medium text-on-surface">1,640</span>
+</div>
+<div class="w-full bg-surface-container-highest rounded-full h-1.5">
+<div class="bg-primary-container h-1.5 rounded-full" style="width: 40%"></div>
+</div>
+</div>
+</div>
+<!-- Metric Card 3 -->
+<div class="bg-primary rounded-lg p-6 pt-8 pl-8 ambient-shadow text-on-primary">
+<span class="font-label text-xs uppercase tracking-[0.05em] text-on-primary/80 mb-4 block">Avg. Household ROI</span>
+<div class="flex items-baseline gap-3">
+<span class="text-4xl font-headline font-bold">145%</span>
+</div>
+<p class="text-xs text-on-primary/70 mt-4 font-body leading-relaxed">Estimated return over 24 months based on initial capital investment and organic herd growth.</p>
+</div>
+</div>
+<!-- Main Content Area -->
+<div class="lg:col-span-8 flex flex-col gap-6">
+<!-- Chart Section (Conceptual) -->
+<div class="bg-surface-container-lowest rounded-lg p-6 pt-8 pl-8 ambient-shadow flex-1">
+<div class="flex justify-between items-center mb-8">
+<h3 class="font-headline text-lg font-medium text-on-surface">Outcome Trajectory</h3>
+<div class="flex gap-2">
+<span class="bg-surface-container px-3 py-1 rounded-full text-xs font-medium text-on-surface-variant cursor-pointer">6 Months</span>
+<span class="bg-surface-container-high px-3 py-1 rounded-full text-xs font-medium text-on-surface cursor-pointer">1 Year</span>
+</div>
+</div>
+<!-- Placeholder for Chart -->
+<div class="w-full h-64 relative flex items-end justify-between px-4">
+<!-- Simulated Chart Bars -->
+<div class="w-12 bg-primary-container/20 rounded-t-sm h-[30%] relative group">
+<div class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 bg-inverse-surface text-inverse-on-surface text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">Q1</div>
+</div>
+<div class="w-12 bg-primary-container/40 rounded-t-sm h-[45%]"></div>
+<div class="w-12 bg-primary-container/60 rounded-t-sm h-[60%]"></div>
+<div class="w-12 bg-primary/80 rounded-t-sm h-[75%]"></div>
+<div class="w-12 gradient-primary rounded-t-sm h-[90%] shadow-[0_0_12px_rgba(0,104,87,0.4)]"></div>
+<!-- Connecting Line concept -->
+<svg class="absolute top-0 left-0 w-full h-full pointer-events-none" preserveaspectratio="none">
+<path d="M 40 180 Q 150 150 250 120 T 450 60 T 650 20" fill="none" opacity="0.6" stroke="#fc820c" stroke-dasharray="6,4" stroke-width="3"></path>
+</svg>
+</div>
+<div class="flex justify-between text-xs text-on-surface-variant mt-4 px-4 border-t border-surface-container pt-4">
+<span>Village Alpha</span>
+<span>Village Beta</span>
+<span>Village Gamma</span>
+<span>Village Delta</span>
+<span>Village Epsilon</span>
+</div>
+</div>
+<!-- Livestock Health Logs -->
+<div class="bg-surface-container-lowest rounded-lg p-6 pt-8 pl-8 ambient-shadow">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline text-lg font-medium text-on-surface">Recent Livestock Health Logs</h3>
+<button class="text-primary text-sm font-medium hover:underline">View All</button>
+</div>
+<div class="flex flex-col gap-4">
+<!-- Log Item 1 -->
+<div class="flex items-center justify-between p-4 bg-surface rounded-xl hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm">pets</span>
+</div>
+<div>
+<p class="font-medium text-sm text-on-surface">Tag #GR-4092</p>
+<p class="text-xs text-on-surface-variant">Beneficiary: Fatima Bi</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="text-xs text-on-surface-variant">Checked: Today</span>
+<span class="bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase">Healthy</span>
+</div>
+</div>
+<!-- Log Item 2 -->
+<div class="flex items-center justify-between p-4 bg-surface rounded-xl hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-sm">medical_services</span>
+</div>
+<div>
+<p class="font-medium text-sm text-on-surface">Tag #GR-4105</p>
+<p class="text-xs text-on-surface-variant">Beneficiary: Rahim Khan</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="text-xs text-on-surface-variant">Checked: Yesterday</span>
+<span class="bg-secondary-container/20 text-secondary px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase">Needs Check</span>
+</div>
+</div>
+<!-- Log Item 3 -->
+<div class="flex items-center justify-between p-4 bg-surface rounded-xl hover:bg-surface-container transition-colors">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-sm">pets</span>
+</div>
+<div>
+<p class="font-medium text-sm text-on-surface">Tag #GR-3881</p>
+<p class="text-xs text-on-surface-variant">Beneficiary: Aisha Patel</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="text-xs text-on-surface-variant">Checked: 2 days ago</span>
+<span class="bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full text-xs font-semibold tracking-wide uppercase">Healthy</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>
