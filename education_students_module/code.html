@@ -99,24 +99,32 @@
             <span class="material-symbols-outlined">dashboard</span>
             Dashboard
         </a>
-        <div class="group flex flex-col gap-1">
-            <a class="flex items-center gap-3 px-4 py-3 bg-teal-700 text-white rounded-full shadow-lg shadow-teal-900/20 transition-all duration-300 ease-in-out" href="../education_management_hub/code.html">
-                <span class="material-symbols-outlined">school</span>
-                Education
-            </a>
-            <div class="ml-8 mt-1 hidden group-hover:flex flex-col gap-1 border-l-2 border-primary-container pl-2 transition-all duration-300">
+        <div class="flex flex-col gap-1">
+            <button data-dropdown-toggle="education-submenu" class="flex items-center justify-between gap-3 px-4 py-3 bg-teal-700 text-white rounded-full shadow-lg shadow-teal-900/20 transition-all duration-300 ease-in-out w-full text-left">
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined">school</span>
+                    Education
+                </div>
+                <span class="material-symbols-outlined transition-transform duration-300 dropdown-arrow">expand_more</span>
+            </button>
+            <div id="education-submenu" class="ml-8 mt-1 hidden flex-col gap-1 border-l-2 border-primary-container pl-2 transition-all duration-300">
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_management_hub/code.html">Hub Overview</a>
                 <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_fellows_module/code.html">Fellows</a>
                 <a class="text-xs font-semibold px-3 py-2 text-primary bg-primary-container/10 rounded-full" href="../education_students_module/code.html">Students</a>
                 <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_schools_module/code.html">Schools</a>
                 <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../education_pta_programs/code.html">PTA and Programs</a>
             </div>
         </div>
-        <div class="group flex flex-col gap-1">
-            <a class="flex items-center gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all" href="../livelihood_management_hub/code.html">
-                <span class="material-symbols-outlined">agriculture</span>
-                Livelihood
-            </a>
-            <div class="ml-8 mt-1 hidden group-hover:flex flex-col gap-1 border-l-2 border-primary-container pl-2 transition-all duration-300">
+        <div class="flex flex-col gap-1">
+            <button data-dropdown-toggle="livelihood-submenu" class="flex items-center justify-between gap-3 px-4 py-3 text-slate-600 dark:text-slate-400 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 hover:bg-teal-50 dark:hover:bg-teal-900/30 rounded-full transition-all w-full text-left">
+                <div class="flex items-center gap-3">
+                    <span class="material-symbols-outlined">agriculture</span>
+                    Livelihood
+                </div>
+                <span class="material-symbols-outlined transition-transform duration-300 dropdown-arrow">expand_more</span>
+            </button>
+            <div id="livelihood-submenu" class="ml-8 mt-1 hidden flex-col gap-1 border-l-2 border-primary-container pl-2 transition-all duration-300">
+                <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../livelihood_management_hub/code.html">Hub Overview</a>
                 <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../livelihood_goat_rearing_1/code.html">Goat Rearing</a>
                 <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../livelihood_sugarcane_cultivation/code.html">Sugarcane Cultivation</a>
                 <a class="text-xs font-medium px-3 py-2 text-slate-500 hover:text-primary transition-colors hover:bg-slate-200/50 rounded-full" href="../beneficiary_master_profile/code.html">Beneficiaries</a>
@@ -420,5 +428,39 @@
 
         menuToggle?.addEventListener('click', toggleMenu);
         sideNavOverlay?.addEventListener('click', toggleMenu);
+
+        // Dropdown Toggle Logic
+        document.querySelectorAll('[data-dropdown-toggle]').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-dropdown-toggle');
+                const submenu = document.getElementById(targetId);
+                const arrow = button.querySelector('.dropdown-arrow');
+                
+                if (submenu) {
+                    const isHidden = submenu.classList.contains('hidden');
+                    
+                    if (isHidden) {
+                        submenu.classList.remove('hidden');
+                        submenu.classList.add('flex');
+                        arrow?.classList.add('rotate-180');
+                    } else {
+                        submenu.classList.add('hidden');
+                        submenu.classList.remove('flex');
+                        arrow?.classList.remove('rotate-180');
+                    }
+                }
+            });
+        });
+
+        // Auto-expand active dropdown
+        document.querySelectorAll('[id$="-submenu"]').forEach(submenu => {
+            const activeLink = submenu.querySelector('a.bg-primary-container\\/10, a.text-white, a.bg-teal-700, a.text-primary');
+            if (activeLink) {
+                submenu.classList.remove('hidden');
+                submenu.classList.add('flex');
+                const button = document.querySelector(`[data-dropdown-toggle="${submenu.id}"]`);
+                button?.querySelector('.dropdown-arrow')?.classList.add('rotate-180');
+            }
+        });
     </script>
 </body></html>
