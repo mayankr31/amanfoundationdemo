@@ -4,80 +4,78 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Impact Dashboard - Aman Foundation</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "secondary-fixed": "#ffdcc6",
-                        "primary": "#006857",
-                        "background": "#f8f9fa",
-                        "on-primary-fixed": "#00201a",
-                        "primary-container": "#00846e",
-                        "on-primary-container": "#f4fffa",
-                        "secondary": "#964900",
-                        "surface-container-low": "#f3f4f5",
-                        "surface-container-high": "#e7e8e9",
-                        "on-secondary-fixed-variant": "#723600",
-                        "on-tertiary-fixed-variant": "#41484a",
-                        "on-surface": "#191c1d",
-                        "primary-fixed": "#7cf8da",
-                        "surface-tint": "#006b59",
-                        "inverse-primary": "#5ddbbe",
-                        "error": "#ba1a1a",
-                        "surface": "#f8f9fa",
-                        "surface-container-highest": "#e1e3e4",
-                        "on-error-container": "#93000a",
-                        "on-primary": "#ffffff",
-                        "surface-variant": "#e1e3e4",
-                        "on-tertiary": "#ffffff",
-                        "on-tertiary-container": "#f9fdff",
-                        "secondary-fixed-dim": "#ffb786",
-                        "on-error": "#ffffff",
-                        "primary-fixed-dim": "#5ddbbe",
-                        "on-secondary": "#ffffff",
-                        "outline": "#6d7a75",
-                        "on-secondary-container": "#5e2c00",
-                        "surface-dim": "#d9dadb",
-                        "tertiary-fixed-dim": "#c1c8ca",
-                        "inverse-on-surface": "#f0f1f2",
-                        "surface-container": "#edeeef",
-                        "on-background": "#191c1d",
-                        "surface-bright": "#f8f9fa",
-                        "on-tertiary-fixed": "#161d1f",
-                        "tertiary-fixed": "#dde4e6",
-                        "surface-container-lowest": "#ffffff",
-                        "on-secondary-fixed": "#311300",
-                        "inverse-surface": "#2e3132",
-                        "secondary-container": "#fc820c",
-                        "on-primary-fixed-variant": "#005143",
-                        "tertiary": "#565d5f",
-                        "error-container": "#ffdad6",
-                        "tertiary-container": "#6f7678",
-                        "outline-variant": "#bccac4",
-                        "on-surface-variant": "#3d4945"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "1rem",
-                        "xl": "1.5rem",
-                        "full": "9999px"
-                    },
-                    "fontFamily": {
-                        "headline": ["Inter", "sans-serif"],
-                        "body": ["Inter", "sans-serif"],
-                        "label": ["Inter", "sans-serif"]
-                    }
-                }
-            }
+<style type="text/tailwindcss">
+        @import "tailwindcss";
+
+        @theme {
+            --color-secondary-fixed: #ffdcc6;
+            --color-primary: #006857;
+            --color-background: #f8f9fa;
+            --color-on-primary-fixed: #00201a;
+            --color-primary-container: #00846e;
+            --color-on-primary-container: #f4fffa;
+            --color-secondary: #964900;
+            --color-surface-container-low: #f3f4f5;
+            --color-surface-container-high: #e7e8e9;
+            --color-on-secondary-fixed-variant: #723600;
+            --color-on-tertiary-fixed-variant: #41484a;
+            --color-on-surface: #191c1d;
+            --color-primary-fixed: #7cf8da;
+            --color-surface-tint: #006b59;
+            --color-inverse-primary: #5ddbbe;
+            --color-error: #ba1a1a;
+            --color-surface: #f8f9fa;
+            --color-surface-container-highest: #e1e3e4;
+            --color-on-error-container: #93000a;
+            --color-on-primary: #ffffff;
+            --color-surface-variant: #e1e3e4;
+            --color-on-tertiary: #ffffff;
+            --color-on-tertiary-container: #f9fdff;
+            --color-secondary-fixed-dim: #ffb786;
+            --color-on-error: #ffffff;
+            --color-primary-fixed-dim: #5ddbbe;
+            --color-on-secondary: #ffffff;
+            --color-outline: #6d7a75;
+            --color-on-secondary-container: #5e2c00;
+            --color-surface-dim: #d9dadb;
+            --color-tertiary-fixed-dim: #c1c8ca;
+            --color-inverse-on-surface: #f0f1f2;
+            --color-surface-container: #edeeef;
+            --color-on-background: #191c1d;
+            --color-surface-bright: #f8f9fa;
+            --color-on-tertiary-fixed: #161d1f;
+            --color-tertiary-fixed: #dde4e6;
+            --color-surface-container-lowest: #ffffff;
+            --color-on-secondary-fixed: #311300;
+            --color-inverse-surface: #2e3132;
+            --color-secondary-container: #fc820c;
+            --color-on-primary-fixed-variant: #005143;
+            --color-tertiary: #565d5f;
+            --color-error-container: #ffdad6;
+            --color-tertiary-container: #6f7678;
+            --color-outline-variant: #bccac4;
+            --color-on-surface-variant: #3d4945;
+
+            --radius-DEFAULT: 0.25rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            --radius-full: 9999px;
+
+            --font-headline: "Inter", "sans-serif";
+            --font-body: "Inter", "sans-serif";
+            --font-label: "Inter", "sans-serif";
         }
-    </script>
-<style>
-        body { font-family: 'Inter', sans-serif; }
+
+        @custom-variant dark (&:where(.dark, .dark *));
+
+        body { 
+            font-family: var(--font-body);
+            background-color: var(--color-surface);
+            color: var(--color-on-surface);
+        }
     </style>
 </head>
 <body class="bg-surface text-on-surface min-h-screen flex antialiased">

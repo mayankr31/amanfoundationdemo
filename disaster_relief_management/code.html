@@ -6,85 +6,76 @@
 <title>Disaster Relief Module - Impact OS</title>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "on-tertiary-container": "#f9fdff",
-                      "inverse-primary": "#5ddbbe",
-                      "surface": "#f8f9fa",
-                      "tertiary-fixed-dim": "#c1c8ca",
-                      "surface-tint": "#006b59",
-                      "primary-fixed-dim": "#5ddbbe",
-                      "surface-container": "#edeeef",
-                      "secondary-fixed": "#ffdcc6",
-                      "primary-fixed": "#7cf8da",
-                      "outline-variant": "#bccac4",
-                      "on-tertiary-fixed-variant": "#41484a",
-                      "on-primary-fixed": "#00201a",
-                      "on-primary-container": "#f4fffa",
-                      "secondary": "#964900",
-                      "on-primary": "#ffffff",
-                      "on-secondary-fixed-variant": "#723600",
-                      "on-tertiary": "#ffffff",
-                      "on-secondary-container": "#5e2c00",
-                      "secondary-fixed-dim": "#ffb786",
-                      "surface-dim": "#d9dadb",
-                      "on-error-container": "#93000a",
-                      "background": "#f8f9fa",
-                      "on-background": "#191c1d",
-                      "inverse-surface": "#2e3132",
-                      "surface-variant": "#e1e3e4",
-                      "error-container": "#ffdad6",
-                      "on-secondary": "#ffffff",
-                      "tertiary-container": "#6f7678",
-                      "surface-container-low": "#f3f4f5",
-                      "on-surface-variant": "#3d4945",
-                      "on-error": "#ffffff",
-                      "surface-container-high": "#e7e8e9",
-                      "tertiary": "#565d5f",
-                      "outline": "#6d7a75",
-                      "inverse-on-surface": "#f0f1f2",
-                      "primary-container": "#00846e",
-                      "surface-bright": "#f8f9fa",
-                      "on-primary-fixed-variant": "#005143",
-                      "primary": "#006857",
-                      "tertiary-fixed": "#dde4e6",
-                      "on-tertiary-fixed": "#161d1f",
-                      "on-secondary-fixed": "#311300",
-                      "surface-container-highest": "#e1e3e4",
-                      "error": "#ba1a1a",
-                      "surface-container-lowest": "#ffffff",
-                      "secondary-container": "#fc820c",
-                      "on-surface": "#191c1d"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.25rem",
-                      "lg": "1rem",
-                      "xl": "1.5rem",
-                      "full": "9999px"
-              },
-              "spacing": {},
-              "fontFamily": {
-                      "headline": [
-                              "Inter"
-                      ],
-                      "body": [
-                              "Inter"
-                      ],
-                      "label": [
-                              "Inter"
-                      ]
-              }
-      },
-          },
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<style type="text/tailwindcss">
+        @import "tailwindcss";
+
+        @theme {
+            --color-on-tertiary-container: #f9fdff;
+            --color-inverse-primary: #5ddbbe;
+            --color-surface: #f8f9fa;
+            --color-tertiary-fixed-dim: #c1c8ca;
+            --color-surface-tint: #006b59;
+            --color-primary-fixed-dim: #5ddbbe;
+            --color-surface-container: #edeeef;
+            --color-secondary-fixed: #ffdcc6;
+            --color-primary-fixed: #7cf8da;
+            --color-outline-variant: #bccac4;
+            --color-on-tertiary-fixed-variant: #41484a;
+            --color-on-primary-fixed: #00201a;
+            --color-on-primary-container: #f4fffa;
+            --color-secondary: #964900;
+            --color-on-primary: #ffffff;
+            --color-on-secondary-fixed-variant: #723600;
+            --color-on-tertiary: #ffffff;
+            --color-on-secondary-container: #5e2c00;
+            --color-secondary-fixed-dim: #ffb786;
+            --color-surface-dim: #d9dadb;
+            --color-on-error-container: #93000a;
+            --color-background: #f8f9fa;
+            --color-on-background: #191c1d;
+            --color-inverse-surface: #2e3132;
+            --color-surface-variant: #e1e3e4;
+            --color-error-container: #ffdad6;
+            --color-on-secondary: #ffffff;
+            --color-tertiary-container: #6f7678;
+            --color-surface-container-low: #f3f4f5;
+            --color-on-surface-variant: #3d4945;
+            --color-on-error: #ffffff;
+            --color-surface-container-high: #e7e8e9;
+            --color-tertiary: #565d5f;
+            --color-outline: #6d7a75;
+            --color-inverse-on-surface: #f0f1f2;
+            --color-primary-container: #00846e;
+            --color-surface-bright: #f8f9fa;
+            --color-on-primary-fixed-variant: #005143;
+            --color-primary: #006857;
+            --color-tertiary-fixed: #dde4e6;
+            --color-on-tertiary-fixed: #161d1f;
+            --color-on-secondary-fixed: #311300;
+            --color-surface-container-highest: #e1e3e4;
+            --color-error: #ba1a1a;
+            --color-surface-container-lowest: #ffffff;
+            --color-secondary-container: #fc820c;
+            --color-on-surface: #191c1d;
+
+            --radius-DEFAULT: 0.25rem;
+            --radius-lg: 1rem;
+            --radius-xl: 1.5rem;
+            --radius-full: 9999px;
+
+            --font-headline: "Inter", "sans-serif";
+            --font-body: "Inter", "sans-serif";
+            --font-label: "Inter", "sans-serif";
         }
-    </script>
-<style>
-        body { font-family: 'Inter', sans-serif; }
+
+        @custom-variant dark (&:where(.dark, .dark *));
+
+        body { 
+            font-family: var(--font-body);
+            background-color: var(--color-surface);
+            color: var(--color-on-surface);
+        }
         .glass-panel {
             background-color: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(12px);
@@ -93,7 +84,7 @@
             box-shadow: 0 8px 24px rgba(25, 28, 29, 0.04);
         }
         .btn-gradient {
-            background: linear-gradient(135deg, #006857 0%, #00846e 100%);
+            background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-container) 100%);
         }
         .custom-scrollbar::-webkit-scrollbar {
             width: 4px;
@@ -102,7 +93,7 @@
             background: transparent;
         }
         .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #e1e3e4;
+            background: var(--color-surface-variant);
             border-radius: 4px;
         }
     </style>

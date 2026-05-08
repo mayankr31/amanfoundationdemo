@@ -4,80 +4,78 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Goat Rearing Distribution &amp; Health - Aman Foundation</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    "colors": {
-                        "on-error": "#ffffff",
-                        "on-primary-fixed": "#00201a",
-                        "on-tertiary-fixed": "#161d1f",
-                        "on-surface": "#191c1d",
-                        "on-error-container": "#93000a",
-                        "surface-container-lowest": "#ffffff",
-                        "surface": "#f8f9fa",
-                        "tertiary": "#565d5f",
-                        "surface-container-high": "#e7e8e9",
-                        "surface-tint": "#006b59",
-                        "secondary-container": "#fc820c",
-                        "surface-variant": "#e1e3e4",
-                        "surface-dim": "#d9dadb",
-                        "primary-container": "#00846e",
-                        "outline": "#6d7a75",
-                        "tertiary-fixed": "#dde4e6",
-                        "error-container": "#ffdad6",
-                        "surface-container-low": "#f3f4f5",
-                        "on-secondary-fixed-variant": "#723600",
-                        "surface-container": "#edeeef",
-                        "on-secondary": "#ffffff",
-                        "on-primary": "#ffffff",
-                        "surface-container-highest": "#e1e3e4",
-                        "on-primary-fixed-variant": "#005143",
-                        "secondary-fixed-dim": "#ffb786",
-                        "on-tertiary-container": "#f9fdff",
-                        "secondary-fixed": "#ffdcc6",
-                        "outline-variant": "#bccac4",
-                        "on-secondary-fixed": "#311300",
-                        "inverse-on-surface": "#f0f1f2",
-                        "background": "#f8f9fa",
-                        "on-tertiary-fixed-variant": "#41484a",
-                        "on-tertiary": "#ffffff",
-                        "on-background": "#191c1d",
-                        "on-surface-variant": "#3d4945",
-                        "on-secondary-container": "#5e2c00",
-                        "tertiary-container": "#6f7678",
-                        "on-primary-container": "#f4fffa",
-                        "tertiary-fixed-dim": "#c1c8ca",
-                        "error": "#ba1a1a",
-                        "inverse-surface": "#2e3132",
-                        "primary-fixed": "#7cf8da",
-                        "surface-bright": "#f8f9fa",
-                        "secondary": "#964900",
-                        "inverse-primary": "#5ddbbe",
-                        "primary": "#006857",
-                        "primary-fixed-dim": "#5ddbbe"
-                    },
-                    "borderRadius": {
-                        "DEFAULT": "0.25rem",
-                        "lg": "1rem",
-                        "xl": "0.75rem",
-                        "full": "9999px"
-                    },
-                    "fontFamily": {
-                        "headline": ["Inter", "sans-serif"],
-                        "body": ["Inter", "sans-serif"],
-                        "label": ["Inter", "sans-serif"]
-                    }
-                },
-            },
+<style type="text/tailwindcss">
+        @import "tailwindcss";
+
+        @theme {
+            --color-on-error: #ffffff;
+            --color-on-primary-fixed: #00201a;
+            --color-on-tertiary-fixed: #161d1f;
+            --color-on-surface: #191c1d;
+            --color-on-error-container: #93000a;
+            --color-surface-container-lowest: #ffffff;
+            --color-surface: #f8f9fa;
+            --color-tertiary: #565d5f;
+            --color-surface-container-high: #e7e8e9;
+            --color-surface-tint: #006b59;
+            --color-secondary-container: #fc820c;
+            --color-surface-variant: #e1e3e4;
+            --color-surface-dim: #d9dadb;
+            --color-primary-container: #00846e;
+            --color-outline: #6d7a75;
+            --color-tertiary-fixed: #dde4e6;
+            --color-error-container: #ffdad6;
+            --color-surface-container-low: #f3f4f5;
+            --color-on-secondary-fixed-variant: #723600;
+            --color-surface-container: #edeeef;
+            --color-on-secondary: #ffffff;
+            --color-on-primary: #ffffff;
+            --color-surface-container-highest: #e1e3e4;
+            --color-on-primary-fixed-variant: #005143;
+            --color-secondary-fixed-dim: #ffb786;
+            --color-on-tertiary-container: #f9fdff;
+            --color-secondary-fixed: #ffdcc6;
+            --color-outline-variant: #bccac4;
+            --color-on-secondary-fixed: #311300;
+            --color-inverse-on-surface: #f0f1f2;
+            --color-background: #f8f9fa;
+            --color-on-tertiary-fixed-variant: #41484a;
+            --color-on-tertiary: #ffffff;
+            --color-on-background: #191c1d;
+            --color-on-surface-variant: #3d4945;
+            --color-on-secondary-container: #5e2c00;
+            --color-tertiary-container: #6f7678;
+            --color-on-primary-container: #f4fffa;
+            --color-tertiary-fixed-dim: #c1c8ca;
+            --color-error: #ba1a1a;
+            --color-inverse-surface: #2e3132;
+            --color-primary-fixed: #7cf8da;
+            --color-surface-bright: #f8f9fa;
+            --color-secondary: #964900;
+            --color-inverse-primary: #5ddbbe;
+            --color-primary: #006857;
+            --color-primary-fixed-dim: #5ddbbe;
+
+            --radius-DEFAULT: 0.25rem;
+            --radius-lg: 1rem;
+            --radius-xl: 0.75rem;
+            --radius-full: 9999px;
+
+            --font-headline: "Inter", "sans-serif";
+            --font-body: "Inter", "sans-serif";
+            --font-label: "Inter", "sans-serif";
         }
-    </script>
-<style>
-        body { font-family: 'Inter', sans-serif; }
+
+        @custom-variant dark (&:where(.dark, .dark *));
+
+        body { 
+            font-family: var(--font-body);
+            background-color: var(--color-surface);
+            color: var(--color-on-surface);
+        }
         .ambient-shadow { box-shadow: 0 8px 24px rgba(25, 28, 29, 0.04); }
         .glass-panel { backdrop-filter: blur(12px); }
         .gradient-primary { background: linear-gradient(135deg, #006857 0%, #00846e 100%); }
